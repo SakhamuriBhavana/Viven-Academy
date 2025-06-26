@@ -1,2 +1,1 @@
-# Viven Academy 
-C Introduction 
+# C Introduction  
