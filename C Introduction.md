@@ -18,6 +18,7 @@ int main() {
     return 0;
 }
 
+
 ## Explanation:
 **#include <stdio.h>** --> Includes standard input/output functions.
 **main()** --> Entry point of every C program.
