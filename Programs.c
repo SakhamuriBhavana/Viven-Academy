@@ -278,7 +278,7 @@ int main() {
 }
 
 **Swapping Two Numbers**
-
+**with using 3rd Variable**
 #include <stdio.h>
 int main() {
     int a = 5, b = 10, temp;
@@ -288,5 +288,14 @@ int main() {
     printf("After swapping: a = %d, b = %d", a, b);
     return 0;
 }
-
+**without using 3rd Variable**
+#include <stdio.h>
+int main() {
+    int a = 5, b = 10;
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    printf("After swapping: a = %d, b = %d", a, b);
+    return 0;
+}
 
