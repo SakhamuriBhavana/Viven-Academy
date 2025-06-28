@@ -36,6 +36,7 @@ int main() {
 **return 0;** --> Ends the program.
 
 ## Why Learn C?
+
 1.Forms the base for learning other languages like C++, Java, and Python.
 
 2.Used in system-level programming like OS, drivers, etc.
@@ -44,32 +45,41 @@ int main() {
 
 ## Difference between the Complier, interpeter and assembler
 **Complier**
+
 1.Translates C source code into assembly language.
 
 2.Checks for syntax errors and optimizes the code.
 **Interpeter**
+
 1.Interpreter is not used in C.
 
 2.Reads code line by line → Executes directly
 
 3.Slower, good for testing small pieces of code quickly.
 **Assembler** 
+
 1.Converts assembly code into machine code (binary format).
 
 2.Produces an object file (.o or .obj).
 
 ## Difference between the Linker and loader
+
 **linker**
+
 1.Combines multiple object files and library files into a single executable file (.exe or .out).
 
 2.Resolves function calls (e.g., linking printf() from the standard library).
+
 **loader** 
+
 1.Loads the executable file into memory for execution.
 
 2.Allocates memory and sets up the program's runtime environment.
 
 ## What is the main differrence between the Compliation error and runtime error
+
 **Compliation Error:-**
+
 1.compliation error is occurs during the compliation time
 
 2.Compliation Error Cause	Syntax errors, type mismatches, missing declarations.
@@ -79,7 +89,9 @@ int main() {
 4.Compliatation Error Fixing	Must be corrected before running the program.
 
 5.Examples:-Missing semicolon, undeclared variable, incorrect function call.
+
 **Runtime Error:-**
+
 1.Runtime Error is occurs during th runtime.
 
 2.Runtime Error Cause Invalid operations like division by zero, accessing invalid memory.
@@ -91,6 +103,7 @@ int main() {
 5.Examples:-Division by zero, accessing an array out of bounds, null pointer dereference.
 
 ## Common Applications of C
+
 1.Operating Systems (like Linux)
 
 2.Compilers
