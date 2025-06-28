@@ -299,3 +299,35 @@ int main() {
     return 0;
 }
 
+** Odd numbers between 1 to 50 by using the for loop**
+    
+#include <stdio.h>
+int main() {
+    int i;
+    printf("Odd numbers from 1 to 50:\n");
+    for (i = 1; i <= 50; i++) {
+        if (i % 2 != 0) {
+            printf("%d ", i);
+        }
+    }
+    return 0;
+}
+
+** Sum of Odd numbers from starting to ending eg:- 10 to 20 in between the sum of odd numbers is 75
+
+#include <stdio.h>
+int main() {
+    int start, end, i, sum = 0;
+    printf("Enter the starting number: ");
+    scanf("%d", &start);
+    printf("Enter the ending number: ");
+    scanf("%d", &end);
+    for (i = start; i <= end; i++) {
+        if (i % 2 != 0) { 
+            sum += i;
+        } 
+    }
+    printf("Sum of all odd numbers between %d and %d is: %d\n", start, end, sum);
+    return 0;
+}
+
