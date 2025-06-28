@@ -1,4 +1,4 @@
-## Introduction
+## Introduction to C
 
 ## What is C?
 C is a powerful, high-performance programming language developed in the early 1970s by **Dennis Ritchie** at Bell Labs. 
