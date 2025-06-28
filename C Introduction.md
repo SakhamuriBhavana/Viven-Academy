@@ -45,7 +45,7 @@ int main() {
 
 3.Improves understanding of memory management and logic building.
 
-## Difference between the Complier, interpeter and assembler
+## Difference between the Compiler, Interpreter and Assembler
 
 **Complier**
 
@@ -53,7 +53,7 @@ int main() {
 
 2.Checks for syntax errors and optimizes the code.
 
-**Interpeter**
+**Interpreter**
 
 1.Interpreter is not used in C.
 
@@ -81,17 +81,17 @@ int main() {
 
 2.Allocates memory and sets up the program's runtime environment.
 
-## What is the main differrence between the Compliation error and runtime error
+## What is the main differrence between the Compilation error and Runtime error
 
-**Compliation Error:-**
+**Compilation Error:-**
 
-1.compliation error is occurs during the compliation time
+1.Compilation error is occurs during the compilation time
 
-2.Compliation Error Cause	Syntax errors, type mismatches, missing declarations.
+2.Compilation Error Cause	Syntax errors, type mismatches, missing declarations.
 
-3.Compliataiton Error Detection	Identified by the compiler before execution.
+3.Compilataiton Error Detection	Identified by the compiler before execution.
 
-4.Compliatation Error Fixing	Must be corrected before running the program.
+4.Compilatation Error Fixing	Must be corrected before running the program.
 
 5.Examples:-Missing semicolon, undeclared variable, incorrect function call.
 
