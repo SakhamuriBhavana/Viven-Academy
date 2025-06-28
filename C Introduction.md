@@ -5,6 +5,7 @@ C is a powerful, high-performance programming language developed in the early 19
 It is widely used for system programming, operating systems, embedded systems, and more.
 
 ## Key Features of C
+
 **Procedural Language** – Follows step-by-step instructions
 
 **Fast and Efficient** – Close to hardware
@@ -27,6 +28,7 @@ int main() {
 }
 
 ## Explanation:
+
 **#include <stdio.h>** --> Includes standard input/output functions.
 
 **main()** --> Entry point of every C program.
@@ -44,11 +46,13 @@ int main() {
 3.Improves understanding of memory management and logic building.
 
 ## Difference between the Complier, interpeter and assembler
+
 **Complier**
 
 1.Translates C source code into assembly language.
 
 2.Checks for syntax errors and optimizes the code.
+
 **Interpeter**
 
 1.Interpreter is not used in C.
@@ -56,6 +60,7 @@ int main() {
 2.Reads code line by line → Executes directly
 
 3.Slower, good for testing small pieces of code quickly.
+
 **Assembler** 
 
 1.Converts assembly code into machine code (binary format).
