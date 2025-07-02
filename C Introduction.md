@@ -104,7 +104,7 @@ int main() {
 
 The basic elements of the C language are the fundamental building blocks that help you write any C program. 
 
-Types of Basic elements of C :- 
+**Types of Basic elements of C :-** 
 
 1.character set
 2.keywords
