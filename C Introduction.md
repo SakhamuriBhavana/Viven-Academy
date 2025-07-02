@@ -117,7 +117,16 @@ int main() {
 5.Device Drivers
 ## Basic elements of C 
 
-The basic elements of the C language are the fundamental building blocks that help you write any C program. Here’s a simple breakdown:
+The basic elements of the C language are the fundamental building blocks that help you write any C program. 
+.Types of Basic elements of C :- 
+1.character set
+2.keywords
+3.identifiers
+4.constants
+5.variable
+6.Datatypes
+7.Expressions
+8.statements
 
 **1. Character Set**
 
@@ -190,7 +199,7 @@ A combination of variables, constants, and operators that produces a value.
 ```
 a + b * 5;
 ```
-**9. Statements**
+**8. Statements**
 
 Instructions that the C program executes.
 
@@ -199,15 +208,5 @@ Instructions that the C program executes.
 int x = 10;  // declaration statement
 x++;         // increment statement
 ```
-**10. Functions**
 
-A block of code that performs a specific task.
-
-**Example:**
-```
-int add(int a, int b) {
-    return a + b;
-}
-```
-The main() function is the starting point of every C program.
 
