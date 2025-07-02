@@ -301,7 +301,7 @@ int main() {
     return 0;
 }
 ```
-** Odd numbers between 1 to 50 by using the for loop**
+**Odd numbers between 1 to 50 by using the for loop**
 ```  
 #include <stdio.h>
 int main() {
@@ -315,7 +315,7 @@ int main() {
     return 0;
 }
 ```
-** Sum of Odd numbers from starting to ending eg:- 10 to 20 in between the sum of odd numbers is 75
+**Sum of Odd numbers from starting to ending eg:- 10 to 20 in between the sum of odd numbers is 75**
 ```
 #include <stdio.h>
 int main() {
