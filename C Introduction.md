@@ -80,8 +80,6 @@ int main() {
 
 ## What is the main differrence between the Compilation error and Runtime error
 
-## ✅ Difference Between Compilation Error and Runtime Error in C
-
 | Aspect                         | Compilation Error                                                                 | Runtime Error                                                                 |
 |-------------------------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
 | **When it occurs**            | Occurs during the **compilation time**                                            | Occurs during **runtime**                                                    |
