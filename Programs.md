@@ -288,6 +288,7 @@ int main() {
     printf("After swapping: a = %d, b = %d", a, b);
     return 0;
 }
+```
 **without using 3rd Variable**
 ```
 #include <stdio.h>
