@@ -186,21 +186,21 @@ Defines the type of data a variable can hold:
 
 1. How many bytes the correspponding variable occupies
 
-2. Type of data stord in corressponding varibale
+2. Type of data stored in corressponding varibale
 
 3. Range of values that can be stored in corressponding variable
 
 **How many bytes the correspponding variable occupies**
 
-**1.Char**=1Byte(8bits)
+**1.Char** =1Byte(8bits)
 
-**2.int**=4Byte(32bits)
+**2.int** =4Byte(32bits)
 
-**3.float**=4Byte(32bits)
+**3.float** =4Byte(32bits)
 
-**4.short**=2Byte(16bits)
+**4.short** =2Byte(16bits)
 
-**5.double**=8Byte(64bits)
+**5.double** =8Byte(64bits)
 
 **Type of data stored in corressponding varibale**
 ```
@@ -242,6 +242,8 @@ Defines the type of data a variable can hold:
   | - long double    |
   +------------------+
 ```
+
+**Range of values that can be stored in corressponding variable**
 
 **Signed Integer Types**
 
