@@ -19,9 +19,13 @@ It is widely used for system programming, operating systems, embedded systems, a
 ## Basic Structure of a C Program
 
 #include <stdio.h>
+
 int main() {
+
     printf("Hello, World!"); 
+    
     return 0;
+
 }
 
 ## Explanation:
