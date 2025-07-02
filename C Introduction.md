@@ -5,16 +5,11 @@ C is a powerful, high-performance programming language developed in the early 19
 It is widely used for system programming, operating systems, embedded systems, and more.
 
 ## Key Features of C
-
-**Procedural Language** – Follows step-by-step instructions
-
-**Fast and Efficient** – Close to hardware
-
-**Portable** – Runs on various platforms
-
-**Modular** – Supports functions and reusable code
-
-**Rich Library** – Built-in functions for various tasks
+- **Procedural Language** – Follows step-by-step instructions
+- **Fast and Efficient** – Close to hardware- 
+- **Portable** – Runs on various platforms
+- **Modular** – Supports functions and reusable code
+- **Rich Library** – Built-in functions for various tasks
 
 ## Basic Structure of a C Program
 ```
@@ -36,11 +31,11 @@ int main() {
 
 ## Why Learn C?
 
-1.Forms the base for learning other languages like C++, Java, and Python.
+- Forms the base for learning other languages like C++, Java, and Python.
 
-2.Used in system-level programming like OS, drivers, etc.
+- Used in system-level programming like OS, drivers, etc.
 
-3.Improves understanding of memory management and logic building.
+- Improves understanding of memory management and logic building.
 
 ## Difference between the Compiler, Interpreter and Assembler
 
