@@ -119,13 +119,13 @@ The basic elements of the C language are the fundamental building blocks that he
 
 These are valid characters used in C programs:
 
-**Letters**: A–Z, a–z
+- **Letters**: A–Z, a–z
 
-**Digits**: 0–9
+- **Digits**: 0–9
 
-**Special symbols**: + - * / = < > % ; , {} [] () # & ^ ! | ~ " ' \
+- **Special symbols**: + - * / = < > % ; , {} [] () # & ^ ! | ~ " ' \
 
-**Whitespace characters**: space, tab(\t), newline(\n), Carriage Return (\r), Form Feed (\f) etc.
+- **Whitespace characters**: space, tab(\t), newline(\n), Carriage Return (\r), Form Feed (\f) etc.
 
 **2. Keywords (Reserved Words)**
 
@@ -174,11 +174,11 @@ float price = 25.5;
 
 Defines the type of data a variable can hold:
 
-**Basic:** int, float, char, double
+- **Basic:** int, float, char, double
 
-**Derived:** array, pointer, function
+- **Derived:** array, pointer, function
 
-**User-defined:** struct, union, enum
+- **User-defined:** struct, union, enum
 
 ## What does a data type Speficify?
 
@@ -192,15 +192,11 @@ Defines the type of data a variable can hold:
 
 **1. How many bytes the correspponding variable occupies**
 
-**1.Char** =1Byte(8bits)
-
-**2.int** =4Byte(32bits)
-
-**3.float** =4Byte(32bits)
-
-**4.short** =2Byte(16bits)
-
-**5.double** =8Byte(64bits)
+- **Char** =1Byte(8bits)
+- **int** =4Byte(32bits)
+- **float** =4Byte(32bits)
+- **short** =2Byte(16bits)
+- **double** =8Byte(64bits)
 
 **2. Type of data stored in corressponding varibale**
 ```
