@@ -139,13 +139,13 @@ int, float, if, else, for, while, return, void, break, continue, switch, case, d
 ```
 **3. Identifiers**
 
-Names used to identify variables, functions, arrays, etc.
+1.Names used to identify variables, functions, arrays, etc.
 
-Must begin with a letter (A–Z, a–z) or underscore (_)
+2.Must begin with a letter (A–Z, a–z) or underscore (_)
 
-Can contain letters, digits, and underscores
+3.Can contain letters, digits, and underscores
 
-Cannot use C keywords as identifiers
+4.Cannot use C keywords as identifiers
 
 Example:
 ```
