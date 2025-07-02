@@ -17,16 +17,13 @@ It is widely used for system programming, operating systems, embedded systems, a
 **Rich Library** – Built-in functions for various tasks
 
 ## Basic Structure of a C Program
+'''
 #include <stdio.h>
-
 int main() {
-
-    printf("Hello, World!");
-    
+    printf("Hello, World!"); 
     return 0;
-
 }
-
+'''
 ## Explanation:
 
 **#include <stdio.h>** --> Includes standard input/output functions.
