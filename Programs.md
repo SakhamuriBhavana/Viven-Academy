@@ -289,6 +289,7 @@ int main() {
     return 0;
 }
 **without using 3rd Variable**
+```
 #include <stdio.h>
 int main() {
     int a = 5, b = 10;
@@ -298,9 +299,9 @@ int main() {
     printf("After swapping: a = %d, b = %d", a, b);
     return 0;
 }
-
+```
 ** Odd numbers between 1 to 50 by using the for loop**
-    
+```  
 #include <stdio.h>
 int main() {
     int i;
@@ -312,9 +313,9 @@ int main() {
     }
     return 0;
 }
-
+```
 ** Sum of Odd numbers from starting to ending eg:- 10 to 20 in between the sum of odd numbers is 75
-
+```
 #include <stdio.h>
 int main() {
     int start, end, i, sum = 0;
@@ -330,3 +331,4 @@ int main() {
     printf("Sum of all odd numbers between %d and %d is: %d\n", start, end, sum);
     return 0;
 }
+```
