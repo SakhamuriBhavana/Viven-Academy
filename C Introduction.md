@@ -193,9 +193,13 @@ What does a data type Speficify?
 **How many bytes the correspponding variable occupies**
 
 **1.Char**=1Byte(8bits)
+
 **2.int**=4Byte(32bits)
+
 **3.float**=4Byte(32bits)
+
 **4.short**=2Byte(16bits)
+
 **5.double**=8Byte(64bits)
 
 **Type of daa stored in corressponding varibale**
