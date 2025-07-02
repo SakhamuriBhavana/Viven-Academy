@@ -153,13 +153,13 @@ int age; // 'age' is an identifier
 
 Fixed values that do not change during execution:
 
--**Integer constants**: 10, -25
+- **Integer constants**: 10, -25
 
--**Float constants**: 3.14, -0.5
+- **Float constants**: 3.14, -0.5
 
--**Character constants**: 'A', '9'
+- **Character constants**: 'A', '9'
 
--**String constants**: "Hello", "123"
+- **String constants**: "Hello", "123"
 
 **5. Variables**
 
