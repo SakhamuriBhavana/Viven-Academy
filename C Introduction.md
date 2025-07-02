@@ -140,11 +140,13 @@ These are valid characters used in C programs:
 
 **Special symbols**: + - * / = < > % ; , {} [] () # & ^ ! | ~ " ' \
 
-**Whitespace characters**: space, tab, newline, etc.
+**Whitespace characters**: space, tab(\t), newline(\n), Carriage Return (\r), Form Feed (\f) etc.
 
 **2. Keywords (Reserved Words)**
 
-These are words that have special meaning in C. Examples:
+These are words that have special meaning in C. 
+
+Examples:
 ```
 int, float, if, else, for, while, return, void, break, continue, switch, case, default, struct
 ```
@@ -193,6 +195,86 @@ Defines the type of data a variable can hold:
 
 **User-defined:** struct, union, enum
 
+What does a data type Speficify?
+
+3 points to Rememeber:-
+
+1. How many bytes the correspponding variable occupies
+
+2. Type of daa stord in corressponding varibale
+
+3. Range of values that can be stored in corressponding variable
+
+**How many bytes the correspponding variable occupies**
+
+**1.Char**=1Byte(8bits)
+**2.int**=4Byte(32bits)
+**3.float**=4Byte(32bits)
+**4.short**=2Byte(16bits)
+**5.double**=8Byte(64bits)
+
+**Type of daa stord in corressponding varibale**
+
+                +-----------------------------------------------+
+                |TYPES OF DATA STORED IN CORRESSPONDING VARIABLE|
+                +-----------------------------------------------+
+                                       |
+         +--------------------+--------+--------+------------------+
+         |                    |                 |                  |
+   +------------+     +---------------+    +----------------+  +------------------+
+   |  Numerics  |     |   Characters  |    |     Strings     |  |  Other Types    |
+   +------------+     +---------------+    +----------------+  +------------------+
+         |                    |                      |                  |
+  +---------------+     +----------------+   +------------------+   Derived & User-
+  | Integer Types |     | char (1 byte)  |   | Array of chars   |   defined types
+  | 1.Decimal     |     | Stores single  |   | Ends with '\0'   |   (struct, array,
+  | 2.Hexadecimal |     | character like |   | Example: "Hi"    |   union, enum)
+  | 3.Octal       |     | 'A', '7', '@'  |   +------------------+
+  +---------------+     | ASCII encoded  |
+         |              +---------------+
+  +------------------+
+  | Range of Values  |    
+  |- short int       |     
+  | - int            |
+  | - long int       |
+  | - long long int  |
+  | - unsigned short |
+  | - unsigned int   |
+  | - unsigned long  |
+  | - unsigned long long |
+  +-----------------------+
+           |
+  +------------------+
+  | Floating Types   |
+  | (Decimal Nos.)   |
+  +------------------+
+  | - float          |
+  | - double         |
+  | - long double    |
+  +------------------+
+
+**Signed Integer Types**
+
+These can store both positive and negative numbers.
+
+|   **Type**      |  **Range (Typical)**              | **Size** | **Example**             
+| --------------- | ----------------------------------| -------- | --------------|
+| `short int`     | -32,768 to 32,767                 | 2 bytes  |`short a = -500;`            
+| `int`           | -2,147,483,648 to 2,147,483,647   | 4 bytes  |`int b = 1000;`         
+| `long int`      | -2.1 billion to 2.1 billion       | 4 bytes  |`long c = 50000;`           
+| `long long int` | Very large range                  | 8 bytes  |`long long d=1..9` 
+
+**Unsigned Interger Types**
+
+These can store only positive numbers (and zero).
+
+| **Type**             | **Range (Typical)**             | **Size**     | **Example**                          |
+| -------------------- | ------------------------------- | ------------ | ------------------------------------ |
+| `unsigned short int` | 0 to 65,535                     | 2 bytes      | `unsigned short a = 40000;`          |
+| `unsigned int`       | 0 to 4,294,967,295              | 4 bytes      | `unsigned int b = 3000000000;`       |
+| `unsigned long int`  | 0 to 4 billion+                 | 4 or 8 bytes | `unsigned long c = 500000;`          |
+| `unsigned long long` | 0 to 18,446,744,073,709,551,615 | 8 bytes      | `unsigned long long d = 9000000000;` |
+
 **7. Expressions**
 
 A combination of variables, constants, and operators that produces a value.
@@ -210,5 +292,6 @@ Instructions that the C program executes.
 int x = 10;  // declaration statement
 x++;         // increment statement
 ```
+
 
 
