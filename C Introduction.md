@@ -190,7 +190,7 @@ Defines the type of data a variable can hold:
 
 3. Range of values that can be stored in corressponding variable
 
-**How many bytes the correspponding variable occupies**
+**1. How many bytes the correspponding variable occupies**
 
 **1.Char** =1Byte(8bits)
 
@@ -202,7 +202,7 @@ Defines the type of data a variable can hold:
 
 **5.double** =8Byte(64bits)
 
-**Type of data stored in corressponding varibale**
+**2. Type of data stored in corressponding varibale**
 ```
               +-------------------------------------------------+
               | TYPES OF DATA STORED IN CORRESSPONDING VARIABLE |
@@ -243,7 +243,7 @@ Defines the type of data a variable can hold:
   +------------------+
 ```
 
-**Range of values that can be stored in corressponding variable**
+**3. Range of values that can be stored in corressponding variable**
 
 **Signed Integer Types**
 
