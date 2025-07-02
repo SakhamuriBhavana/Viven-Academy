@@ -249,7 +249,7 @@ int main() {
 }
 ```
 **Check Vowel or Consonant**
-
+```
 #include <stdio.h>
 int main() {
     char ch;
@@ -262,9 +262,9 @@ int main() {
         printf("Consonant");
     return 0;
 }
-
+```
 **Multiplication Table**
-
+```
 #include <stdio.h>
 int main() {
     int num;
@@ -275,9 +275,10 @@ int main() {
     }
     return 0;
 }
-
+```
 **Swapping Two Numbers**
 **with using 3rd Variable**
+```
 #include <stdio.h>
 int main() {
     int a = 5, b = 10, temp;
