@@ -216,34 +216,22 @@ What does a data type Speficify?
 **Type of daa stord in corressponding varibale**
 
                 +-----------------------------------------------+
-                |TYPES OF DATA STORED IN CORRESSPONDING VARIABLE|
+                |```TYPES OF DATA STORED IN CORRESSPONDING VARIABLE```|
                 +-----------------------------------------------+
-                                       
-                                       |
-         
-         +--------------------+--------+--------+------------------+
-         
-         |                    |                 |                  |
-   
+                                       |      
+         +--------------------+--------+--------+------------------+    
+         |                    |                 |                  |   
+   +------------+     +---------------+    +----------------+  +------------------+ 
+   |```Numerics```  |     |   ```Characters```  |    |     ```Strings```     |  |  ```Other Types```    |
    +------------+     +---------------+    +----------------+  +------------------+
-   
-   |  Numerics  |     |   Characters  |    |     Strings     |  |  Other Types    |
-   
-   +------------+     +---------------+    +----------------+  +------------------+
-   
-         |                    |                      |                  |
-  
-  +---------------+     +----------------+   +------------------+   Derived & User-
-  
+         |                    |                      |                  |  
+  +---------------+     +----------------+   +------------------+   Derived & User- 
   | Integer Types |     | char (1 byte)  |   | Array of chars   |   defined types
   | 1.Decimal     |     | Stores single  |   | Ends with '\0'   |   (struct, array,
   | 2.Hexadecimal |     | character like |   | Example: "Hi"    |   union, enum)
-  | 3.Octal       |     | 'A', '7', '@'  |   +------------------+
-  
+  | 3.Octal       |     | 'A', '7', '@'  |   +------------------+ 
   +---------------+     | ASCII encoded  |
-  
-         |              +---------------+
-  
+          |              +---------------+  
   +------------------+
   | Range of Values  |    
   |- short int       |     
@@ -254,8 +242,7 @@ What does a data type Speficify?
   | - unsigned int   |
   | - unsigned long  |
   | - unsigned long long |
-  +-----------------------+
-        
+  +-----------------------+        
            |
   +------------------+
   | Floating Types   |
