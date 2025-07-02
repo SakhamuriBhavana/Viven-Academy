@@ -216,7 +216,7 @@ What does a data type Speficify?
 **Type of daa stord in corressponding varibale**
   
            ```+-------------------------------------------------+
-              |`TYPES OF DATA STORED IN CORRESSPONDING VARIABLE`|
+              | TYPES OF DATA STORED IN CORRESSPONDING VARIABLE |
               +-------------------------------------------------+
                                        |      
          +--------------------+--------+--------+------------------+    
