@@ -214,8 +214,45 @@ What does a data type Speficify?
 **5.double**=8Byte(64bits)
 
 **Type of daa stord in corressponding varibale**
+  
+           ```+-------------------------------------------------+
+              |`TYPES OF DATA STORED IN CORRESSPONDING VARIABLE`|
+              +-------------------------------------------------+
+                                       |      
+         +--------------------+--------+--------+------------------+    
+         |                    |                 |                  |   
+   +------------+     +---------------+    +----------------+  +------------------+ 
+   |`Numerics`  |     | `Characters`  |    |  `Strings`     |  |  `Other Types`   |
+   +------------+     +---------------+    +----------------+  +------------------+
+         |                    |                      |                  |  
+  +---------------+     +----------------+   +------------------+   Derived & User- 
+  |`Integer Types`|     | `char (1 byte)`|   | `Array of chars` |   defined types
+  | 1.Decimal     |     | Stores single  |   | Ends with '\0'   |   (struct, array,
+  | 2.Hexadecimal |     | character like |   | Example: "Hi"    |   union, enum)
+  | 3.Octal       |     | 'A', '7', '@'  |   +------------------+ 
+  +---------------+     | ASCII encoded  |
+          |              +---------------+  
+  +------------------+
+  | `Range of Values`|    
+  |- short int       |     
+  | - int            |
+  | - long int       |
+  | - long long int  |
+  | - unsigned short |
+  | - unsigned int   |
+  | - unsigned long  |
+  | - unsigned long long |
+  +-----------------------+        
+           |
+  +------------------+
+  | Floating Types   |
+  | (Decimal Nos.)   |
+  +------------------+
+  | - float          |
+  | - double         |
+  | - long double    |
+  +------------------+```
 
- ```text +-------------------------------------------------+ | TYPES OF DATA STORED IN CORRESPONDING VARIABLE | +-------------------------------------------------+ | +--------------------+--------+--------+------------------+ | | | | +------------+ +---------------+ +----------------+ +------------------+ | Numerics | | Characters | | Strings | | Other Types | +------------+ +---------------+ +----------------+ +------------------+ | | | | +----------------+ +----------------+ +------------------+ +---------------------+ | Integer Types | | char (1 byte) | | Array of chars | | Derived & User- | | (Whole Nos.) | | Stores single | | Ends with '\0' | | defined types | | | | character like | | Example: "Hi" | | (struct, array, | | | | 'A', '7', '@' | +------------------+ | union, enum) | | | | ASCII encoded | | +----------------+ +----------------+ | | - short int | | - int | | - long int | | - long long int | | - unsigned short | | - unsigned int | | - unsigned long | | - unsigned long long | +------------------+ | Floating Types | | (Decimal Nos.) | +------------------+ | - float | | - double | | - long double | +------------------+ ``` 
 
 **Signed Integer Types**
 
