@@ -180,7 +180,7 @@ Defines the type of data a variable can hold:
 
 **User-defined:** struct, union, enum
 
-What does a data type Speficify?
+**What does a data type Speficify?**
 
 3 points to Rememeber:-
 
