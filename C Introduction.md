@@ -115,5 +115,83 @@ int main() {
 4.Game Development
 
 5.Device Drivers
+## Basic elements of C 
+The basic elements of the C language are the fundamental building blocks that help you write any C program. Here’s a simple breakdown:
 
+**1. Character Set**
+These are valid characters used in C programs:
+
+Letters: A–Z, a–z
+
+Digits: 0–9
+
+Special symbols: + - * / = < > % ; , {} [] () # & ^ ! | ~ " ' \
+
+Whitespace characters: space, tab, newline, etc.
+
+**2. Keywords (Reserved Words)**
+These are words that have special meaning in C. Examples:
+```
+int, float, if, else, for, while, return, void, break, continue, switch, case, default, struct
+```
+**3. Identifiers**
+Names used to identify variables, functions, arrays, etc.
+
+Must begin with a letter (A–Z, a–z) or underscore (_)
+
+Can contain letters, digits, and underscores
+
+Cannot use C keywords as identifiers
+
+Example:
+```
+int age; // 'age' is an identifier
+```
+**4. Constants**
+Fixed values that do not change during execution:
+
+Integer constants: 10, -25
+
+Float constants: 3.14, -0.5
+
+Character constants: 'A', '9'
+
+String constants: "Hello", "123"
+
+**5. Variables**
+Used to store data. Each variable must be declared with a type.
+
+Example:
+```
+int marks = 90;
+float price = 25.5;
+```
+**6. Data Types**
+Defines the type of data a variable can hold:
+
+Basic: int, float, char, double
+
+Derived: array, pointer, function
+
+User-defined: struct, union, enum
+
+**7. Expressions**
+A combination of variables, constants, and operators that produces a value.
+```
+a + b * 5;
+```
+**9. Statements**
+Instructions that the C program executes.
+```
+int x = 10;  // declaration statement
+x++;         // increment statement
+```
+**10. Functions**
+A block of code that performs a specific task.
+```
+int add(int a, int b) {
+    return a + b;
+}
+```
+The main() function is the starting point of every C program.
 
