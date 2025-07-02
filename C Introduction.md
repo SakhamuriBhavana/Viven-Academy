@@ -80,29 +80,16 @@ int main() {
 
 ## What is the main differrence between the Compilation error and Runtime error
 
-**Compilation Error:-**
+## ✅ Difference Between Compilation Error and Runtime Error in C
 
-1.Compilation error is occurs during the compilation time
+| Aspect                         | Compilation Error                                                                 | Runtime Error                                                                 |
+|-------------------------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| **When it occurs**            | Occurs during the **compilation time**                                            | Occurs during **runtime**                                                    |
+| **Cause**                     | Syntax errors, type mismatches, missing declarations                              | Invalid operations like division by zero, accessing invalid memory           |
+| **Detection**                 | Identified by the **compiler before execution**                                   | Detected **while the program is running**                                    |
+| **Fixing**                    | Must be **corrected before running** the program                                  | Requires **debugging after execution**                                       |
+| **Examples**                  | Missing semicolon, undeclared variable, incorrect function call                   | Division by zero, array out of bounds, null pointer dereference              |
 
-2.Compilation Error Cause	Syntax errors, type mismatches, missing declarations.
-
-3.Compilataiton Error Detection	Identified by the compiler before execution.
-
-4.Compilatation Error Fixing	Must be corrected before running the program.
-
-5.Examples:-Missing semicolon, undeclared variable, incorrect function call.
-
-**Runtime Error:-**
-
-1.Runtime Error is occurs during th runtime.
-
-2.Runtime Error Cause Invalid operations like division by zero, accessing invalid memory.
-
-3.Runtime Error Detection Occurs while the program is running.
-
-4.Runtime Error Fixing Requires debugging after execution.
-
-5.Examples:-Division by zero, accessing an array out of bounds, null pointer dereference.
 
 ## Common Applications of C
 
