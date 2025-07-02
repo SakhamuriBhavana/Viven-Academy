@@ -1,5 +1,5 @@
 ## Sum of two numbers 
-'''c
+
 #include <stdio.h>
 int main() {
     int a, b, sum;
@@ -9,7 +9,7 @@ int main() {
     printf("Sum = %d", sum);
     return 0;
 }
-'''
+
 **Even or Odd**
 
 #include <stdio.h>
