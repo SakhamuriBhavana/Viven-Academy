@@ -1,4 +1,4 @@
-**Sum of Two Numbers**
+
 '''c
 #include <stdio.h>
 int main() {
