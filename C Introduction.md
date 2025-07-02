@@ -32,46 +32,39 @@ int main() {
 ## Why Learn C?
 
 - Forms the base for learning other languages like C++, Java, and Python.
-
 - Used in system-level programming like OS, drivers, etc.
-
 - Improves understanding of memory management and logic building.
 
 ## Difference between the Compiler, Interpreter and Assembler
 
 **Complier**
 
-1.Translates C source code into assembly language.
-
-2.Checks for syntax errors and optimizes the code.
+- Translates C source code into assembly language.
+- Checks for syntax errors and optimizes the code.
 
 **Interpreter**
 
-1.Interpreter is not used in C.
-
-2.Reads code line by line → Executes directly
-
-3.Slower, good for testing small pieces of code quickly.
+- Interpreter is not used in C.
+- Reads code line by line → Executes directly
+- Slower, good for testing small pieces of code quickly.
 
 **Assembler** 
 
-1.Converts assembly code into machine code (binary format).
-
-2.Produces an object file (.o or .obj).
+- Converts assembly code into machine code (binary format).
+- Produces an object file (.o or .obj).
 
 ## Difference between the Linker and loader
 
 **linker**
 
-1.Combines multiple object files and library files into a single executable file (.exe or .out).
-
-2.Resolves function calls (e.g., linking printf() from the standard library).
+- Combines multiple object files and library files into a single executable file (.exe or .out).
+- Resolves function calls (e.g., linking printf() from the standard library).
 
 **loader** 
 
-1.Loads the executable file into memory for execution.
+- Loads the executable file into memory for execution.
 
-2.Allocates memory and sets up the program's runtime environment.
+- Allocates memory and sets up the program's runtime environment.
 
 ## What is the main differrence between the Compilation error and Runtime error
 
@@ -132,13 +125,10 @@ int, float, if, else, for, while, return, void, break, continue, switch, case, d
 ```
 **3. Identifiers**
 
-1.Names used to identify variables, functions, arrays, etc.
-
-2.Must begin with a letter (A–Z, a–z) or underscore (_)
-
-3.Can contain letters, digits, and underscores
-
-4.Cannot use C keywords as identifiers
+- Names used to identify variables, functions, arrays, etc.
+- Must begin with a letter (A–Z, a–z) or underscore (_)
+- Can contain letters, digits, and underscores
+- Cannot use C keywords as identifiers
 
 Example:
 ```
@@ -179,11 +169,9 @@ Defines the type of data a variable can hold:
 
 3 points to Rememeber:-
 
-1. How many bytes the correspponding variable occupies
-
-2. Type of data stored in corressponding varibale
-
-3. Range of values that can be stored in corressponding variable
+- How many bytes the correspponding variable occupies
+- Type of data stored in corressponding varibale
+- Range of values that can be stored in corressponding variable
 
 **1. How many bytes the correspponding variable occupies**
 
