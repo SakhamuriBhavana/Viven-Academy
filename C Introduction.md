@@ -186,7 +186,7 @@ What does a data type Speficify?
 
 1. How many bytes the correspponding variable occupies
 
-2. Type of daa stord in corressponding varibale
+2. Type of data stord in corressponding varibale
 
 3. Range of values that can be stored in corressponding variable
 
@@ -202,7 +202,7 @@ What does a data type Speficify?
 
 **5.double**=8Byte(64bits)
 
-**Type of daa stored in corressponding varibale**
+**Type of data stored in corressponding varibale**
 ```
               +-------------------------------------------------+
               | TYPES OF DATA STORED IN CORRESSPONDING VARIABLE |
