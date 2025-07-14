@@ -333,3 +333,74 @@ int main() {
     return 0;
 }
 ```
+**Count the Number of Vowels in a string** 
+```
+#include <stdio.h>
+int main() {
+  char str[100];
+  printf("Enter a string:");
+  scanf("%s",&str);
+  int count=0;
+  for(int i=0;str[i]!='\0';i++)
+  {
+      if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' || str[i]=='A'|| str[i]=='E'|| str[i]=='I'|| str[i]=='O'|| str[i]=='U')
+      {
+          count++;
+      }
+  }
+  printf("Number of vowels in  a string:");
+  printf("%d",count);
+
+    return 0;
+}
+```
+**Sum of Numerics in a String**
+```
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    printf("Enter a string:");
+    fgets(str,sizeof(str),stdin);
+    str[strcspn(str,"\n")]='\0';
+    int sum=0;
+    for(int i=0;str[i]!='\0';i++)
+    {
+        if(str[i]>='0' && str[i]<='9')
+        {
+            sum+=str[i]-'0';
+        }
+    }
+    printf("Sum of integers in a string:%d",sum);
+    return 0;
+}
+```
+**Sum of Adjacent Elements in an Array and print Highest Sum**
+```
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter the number of elements in an array:");
+    scanf("%d",&n);
+    printf("Enter %d elements:");
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    int highest_sum=0;
+    int add=0;
+    for(int i=0;i<n-1;i++)
+    {
+        add=arr[i]+arr[i+1];
+        if(add > highest_sum)
+        {
+            highest_sum=add;
+        }
+    }
+    printf("%d",highest_sum);
+    return 0;    
+}
+```
