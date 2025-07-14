@@ -404,3 +404,112 @@ int main()
     return 0;    
 }
 ```
+**Swapping of 2 Variables by using Functions**
+```
+#include <stdio.h>
+void swap(int *a, int *b);
+int main() {
+    int x, y;
+    printf("Enter first number: ");
+    scanf("%d", &x);
+    printf("Enter second number: ");
+    scanf("%d", &y);
+    printf("\nBefore swapping:\n");
+    printf("x = %d\ny = %d\n", x, y);
+    swap(&x, &y);
+    printf("\nAfter swapping:\n");
+    printf("x = %d\ny = %d\n", x, y);
+    return 0;
+}
+void swap(int *a, int *b) {
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+```
+**write a function to reverse a number in C language**
+```
+#include <stdio.h>
+int reverseNumber(int n);
+int main() {
+    int num, reversed;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    reversed = reverseNumber(num);
+    printf("Reversed number: %d\n", reversed);
+    return 0;
+}
+int reverseNumber(int n) {
+    int reverse = 0;
+    while (n != 0) {
+        reverse = reverse * 10 + n % 10;
+        n = n / 10;
+    }
+    return reverse;
+}
+```
+**Write a Function to print Sum of Even numbers in a number and Product of Odd Numbers in a Numbers**
+```
+#include <stdio.h>
+void findSumAndProduct(int number);
+int main() {
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    findSumAndProduct(number);
+    return 0;
+}
+void findSumAndProduct(int number) {
+    int evenSum = 0;
+    int oddProduct = 1;
+    int foundOdd = 0;
+    while (number > 0) {
+        int digit = number % 10;  
+
+        if (digit % 2 == 0) {
+            evenSum = evenSum + digit;  
+        } else {
+            oddProduct = oddProduct * digit;  
+            foundOdd = 1;
+        }
+        number = number / 10;
+    }
+    printf("Sum of even digits = %d\n", evenSum);
+    if (foundOdd == 1) {
+        printf("Product of odd digits = %d\n", oddProduct);
+    } else {
+        printf("There are no odd digits.\n");
+    }
+}
+```
+**check whether a number is divisible by 3 or divisible 5 but not both without using functions**
+```
+#include <stdio.h>
+int main() {
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    if ((number % 3 == 0 && number % 5 != 0) || (number % 3 != 0 && number % 5 == 0)) {
+        printf("%d is divisible by 3 or 5, but not both.\n", number);
+    } else {
+        printf("%d is either not divisible by 3 or 5, or divisible by both.\n", number);
+    }
+    return 0;
+}
+```
+**check whether the entered character is alphabet or not using logical operators without functions**
+```
+#include <stdio.h>
+int main() {
+    char ch;
+    printf("Enter a character: ");
+    scanf(" %c", &ch);  
+    if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) {
+        printf("'%c' is an alphabet.\n", ch);
+    } else {
+        printf("'%c' is NOT an alphabet.\n", ch);
+    }
+    return 0;
+}
+```
