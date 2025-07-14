@@ -513,3 +513,40 @@ int main() {
     return 0;
 }
 ```
+**Write a Program to find the majority element of an array**
+```
+#include <stdio.h>
+int main()
+{ 
+    int n,i,j,count,me;
+    printf("Enter the number of elememnts in an array:");
+    scanf("%d",&n);
+    printf("Enter %d elements:",n);
+    int arr[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+      count=0;
+          for(j=0;j<n;j++)
+          {
+              if(arr[i]==arr[j])
+              {
+                 count++;
+              }
+           }
+           if(count>n/2)
+            {
+                me=arr[i];
+                break;
+            }
+    }
+if(me!=-1)
+    printf("The majority element is:%d\n",me);
+else
+    printf("There is  bo me element");
+    return 0;
+    }
+```
