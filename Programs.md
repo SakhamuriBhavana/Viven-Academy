@@ -550,3 +550,75 @@ else
     return 0;
     }
 ```
+**write a program to find the substring in a string in c language without using the functions**
+```
+#include <stdio.h>
+int main() {
+    char mainStr[100], subStr[100];
+    int i, j;
+    printf("Enter the main string: ");
+    scanf("%s", mainStr); 
+    printf("Enter the substring to search: ");
+    scanf("%s", subStr);
+    for (i = 0; mainStr[i] != '\0'; i++) {
+        for (j = 0; subStr[j] != '\0'; j++) {
+            if (mainStr[i + j] != subStr[j]) {
+                break;
+            }
+        }
+        if (subStr[j] == '\0') {
+            printf("Substring found at position %d\n", i);
+            return 0;
+        }
+    }
+    printf("Substring not found.\n");
+    return 0;
+}
+```
+**Program to reverse a string by using funcitions**
+```
+#include <stdio.h>
+void reverseString(char str[]); 
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    scanf("%s", str);  
+    reverseString(str); 
+    printf("Reversed string: %s\n", str);
+    return 0;
+}
+void reverseString(char str[]) {
+    int start = 0;
+    int end = 0;
+    while (str[end] != '\0') {
+        end++;
+    }
+    end--; 
+    while (start < end) {
+        char temp = str[start];
+        str[start] = str[end];
+        str[end] = temp;
+        start++;
+        end--;
+    }
+}
+```
+**program to count the number of words in a string**
+```
+#include <stdio.h>
+int main() {
+    char str[200];
+    int i = 0, words = 0;
+
+    printf("Enter a sentence: ");
+    fgets(str, sizeof(str), stdin);  
+    while (str[i] != '\0') {
+        if (str[i] != ' ' && (i == 0 || str[i - 1] == ' ')) {
+            words++;  
+        }
+        i++;
+    }
+    printf("Word count: %d\n", words);
+    return 0;
+}
+```
