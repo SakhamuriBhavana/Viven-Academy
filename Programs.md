@@ -356,23 +356,20 @@ int main() {
 ```
 **Sum of Numerics in a String**
 ```
-#include<stdio.h>
-#include<string.h>
-int main()
-{
+#include <stdio.h>
+int main() {
     char str[100];
-    printf("Enter a string:");
-    fgets(str,sizeof(str),stdin);
-    str[strcspn(str,"\n")]='\0';
-    int sum=0;
-    for(int i=0;str[i]!='\0';i++)
-    {
-        if(str[i]>='0' && str[i]<='9')
-        {
-            sum+=str[i]-'0';
+    int sum = 0, i = 0;
+    printf("Enter a string: ");
+    scanf("%s", str); // Reads a word (no spaces)
+
+    while (str[i] != '\0') {
+        if (str[i] >= '0' && str[i] <= '9') {
+            sum += str[i] - '0'; // Convert character digit to int
         }
+        i++;
     }
-    printf("Sum of integers in a string:%d",sum);
+    printf("Sum of numeric digits: %d\n", sum);
     return 0;
 }
 ```
@@ -550,7 +547,7 @@ else
     return 0;
     }
 ```
-**write a program to find the substring in a string in c language without using the functions**
+**write a program to find the substring in a string without using the functions**
 ```
 #include <stdio.h>
 int main() {
