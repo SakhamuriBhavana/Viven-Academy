@@ -619,3 +619,56 @@ int main() {
     return 0;
 }
 ```
+**Program to reverse the character in a string**
+```
+#include <stdio.h>
+int main() {
+    char str[100];
+    int i, length = 0;
+    printf("Enter a string: ");
+    scanf("%s", str);  
+    while (str[length] != '\0') {
+        length++;
+    }
+    for (i = 0; i < length / 2; i++) {
+        char temp = str[i];
+        str[i] = str[length - 1 - i];
+        str[length - 1 - i] = temp;
+    }
+    printf("Reversed string: %s\n", str);
+    return 0;
+}
+```
+**Count the Number words in a sentence**
+```
+#include <stdio.h>
+int main() {
+    char str[200];       
+    int i = 0, words = 1;
+    printf("Enter a sentence: ");
+    scanf(" %[^\n]", str); 
+    while (str[i] != '\0') {              
+        if (str[i] == ' ' && str[i+1] != ' ') {
+            words++;                      
+        }
+        i++;                              
+    }
+    printf("Number of words: %d\n", words);
+    return 0;
+}
+```
+**Find the Length of a String (without strlen)**
+```
+#include <stdio.h>
+int main() {
+    char str[100];
+    int i = 0;
+    printf("Enter a string: ");
+    scanf("%s", str);
+    while (str[i] != '\0') {
+        i++;
+    }
+    printf("Length of the string: %d\n", i);
+    return 0;
+}
+```
