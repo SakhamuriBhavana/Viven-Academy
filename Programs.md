@@ -672,3 +672,58 @@ int main() {
     return 0;
 }
 ```
+**Program on to Extract the given string**
+```
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    int start,end;
+    printf("enter a string: ");
+    fgets(str,sizeof(str),stdin);
+    printf("Enter the start and end value: ");
+    scanf("%d %d",&start,&end);
+    for(int i=start;i<end;i++){
+        for(int j=i;j<end;j++){
+            for(int k=i;k<=j;k++){
+                printf("%c",str[k]);
+            }
+            printf("\n");
+        }
+    }
+}
+```
+**Program on odd numbers on left side and even numbers on right side**
+```
+#include <stdio.h>
+int main() {
+    int arr[100], n, i, j, temp;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    printf("Enter %d elements:\n", n);
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    i = 0;
+    j = n - 1;
+    while(i < j) {
+        while(arr[i] % 2 != 0 && i < j) {
+            i++;
+        }
+        while(arr[j] % 2 == 0 && i < j) {
+            j--;
+        }
+        if(i < j) {
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+    printf("Reordered array (odd left, even right):\n");
+    for(i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+```
