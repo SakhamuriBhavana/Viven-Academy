@@ -727,3 +727,31 @@ int main() {
     return 0;
 }
 ```
+**Check Whether the given string is palindorme or not**
+```
+#include<stdio.h>
+#include<string.h>
+int manin()
+{
+    char str[100];
+    int i,j;
+    printf("Enter the String:");
+    scanf("%s",str);
+    for(i=0,j=strlen(str)-1;i<=j;i++,j--)
+    {
+        if(str[i]!=str[j])
+        {
+             break;
+        }
+    }
+    if(i>j)
+    {
+       printf("String is Palindrome\n");
+    }
+    else
+    {
+       printf("String is Not Palindrome\n");
+    }
+    return 0;
+}
+```
