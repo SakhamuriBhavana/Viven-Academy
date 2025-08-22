@@ -496,7 +496,7 @@ condition ? true : false
 
   They are grouped into:
 - **Decision-making (branching)**: `if`, `if-else`, `else-if ladder`, `switch`
-- **Looping (iteration)**: `for`, `while`, `do-while`
+- **Looping (iteration)**: `for`, `while`, `do-while`,`Nested-Loop`
 - **Jump statements**: `break`, `continue`, `goto`, `return`
 
  ## A) Decision-Making (Branching)
@@ -811,6 +811,56 @@ int main()
         printf("%d ", i);
         i++;
     } while(i <= 5);
+    return 0;
+}
+```
+
+**4.Nested-Loop**
+
+- A nested loop means having one loop inside another loop.
+
+- The inner loop runs completely for each iteration of the outer loop.
+
+- Mostly used in patterns, matrices, and multi-dimensional problems.
+
+**FlowChart**
+```
+        ┌─────────────┐
+        │ Outer Loop  │◄───────────────┐
+        └─────┬───────┘                │
+              ▼                        │
+        ┌─────────────┐                │
+        │ Inner Loop  │◄────────────┐  │
+        └─────┬───────┘             │  │
+              ▼                     │  │
+         Statements                 │  │
+              │                     │  │
+              ▼                     │  │
+        ┌─────────────┐             │  │
+        │ Inner Loop? │─────────────┘  │
+        └─────┬───────┘                │
+              ▼                        │
+        ┌─────────────┐                │
+        │ Outer Loop? │────────────────┘
+        └─────┬───────┘
+              ▼
+            Exit
+```
+
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for(i = 1; i <= 5; i++)
+    {
+        for(j = 1; j <= i; j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
     return 0;
 }
 ```
