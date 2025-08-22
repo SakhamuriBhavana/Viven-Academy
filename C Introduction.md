@@ -311,33 +311,174 @@ Operators are symbols that perform operations on data.(or) Operators are symbols
 
 ## Types of Operators
 
-- **Arithmetic Operators** : perform basic math (+ - * / %). 
+**1.Arithmetic Operators** :
+perform basic math (+ - * / %).
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int a = 10, b = 5, result;
+    int x = 6, y = 3;
+    printf("Arithmetic Operators:\n");
+    printf("a + b = %d\n", a + b);
+    printf("a - b = %d\n", a - b);
+    printf("a * b = %d\n", a * b);
+    printf("a / b = %d\n", a / b);
+    printf("a %% b = %d\n", a % b);
+    return 0;
+}
+```
+**2.Relational Operators** :
+Compare values ( == != > < >= <= ).
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int a = 10, b = 5, result;
+    int x = 6, y = 3;
+    printf("\nRelational Operators:\n");
+    printf("a > b = %d\n", a > b);
+    printf("a < b = %d\n", a < b);
+    printf("a == b = %d\n", a == b);
+    printf("a != b = %d\n", a != b);
+    return 0;
+}
+```
+  
+**3.Logical Operators** :
+Compare Conditions (&& || !).
+**Example**
+```
+ #include <stdio.h>
+ int main()
+ {
+    int a = 10, b = 5, result;
+    int x = 6, y = 3;
+    printf("\nLogical Operators:\n");
+    printf("(a > b) && (x > y) = %d\n", (a > b) && (x > y));
+    printf("(a > b) || (x < y) = %d\n", (a > b) || (x < y));
+    printf("!(a < b) = %d\n", !(a < b));
+    return 0;
+}
+```
 
-- **Relational Operators** :Compare values ( == != > < >= <= ).
-
-- **Logical Operators** : Compare Conditions (&& || !). 
-
-- **Assignment Operators** : Shorthand Updates (= += -= *= /= %=). 
-
-- **Increment/Decrement Operators** : Increase/decrease by 1 (++ --). 
-
-- **Bitwise Operators** : Operate at binary level (& | ^ ~ << >>).
-
-- **Conditional (Ternary) Operator**
-  Shorthand if-else
+**4.Assignment Operators** :
+Shorthand Updates (= += -= *= /= %=). 
+**Example**
+```
+ #include <stdio.h>
+ int main()
+ {
+    int a = 10, b = 5, result;
+    int x = 6, y = 3;
+    printf("\nAssignment Operators:\n");
+    result = a;     // simple assignment
+    printf("result = %d\n", result);
+    result += b;    // result = result + b
+    printf("result += b → %d\n", result);
+    result -= b;    // result = result - b
+    printf("result -= b → %d\n", result);
+    result *= b;    // result = result * b
+    printf("result *= b → %d\n", result);
+    result /= b;    // result = result / b
+    printf("result /= b → %d\n", result);
+    return 0;
+}
+```
+**5.Increment/Decrement Operators** :
+Increase/decrease by 1 (++ --). 
+**Example**
+```
+ #include <stdio.h>
+ int main()
+ {
+    int a = 10, b = 5, result;
+    int x = 6, y = 3;
+    printf("\nIncrement and Decrement Operators:\n");
+    printf("a++ = %d\n", a++);   // Post-increment
+    printf("Now a = %d\n", a);
+    printf("++b = %d\n", ++b);   // Pre-increment
+    printf("Now b = %d\n", b);
+    printf("a-- = %d\n", a--);   // Post-decrement
+    printf("Now a = %d\n", a);
+    printf("--b = %d\n", --b);   // Pre-decrement
+    printf("Now b = %d\n", b);
+    return 0;
+}
+```
+**6.Bitwise Operators** :
+Operate at binary level (& | ^ ~ << >>).
+**Example**
+```
+ #include <stdio.h>
+ int main()
+ {
+    int a = 10, b = 5, result;
+    int x = 6, y = 3;
+    printf("\nBitwise Operators:\n");
+    printf("a & b = %d\n", a & b);   // AND
+    printf("a | b = %d\n", a | b);   // OR
+    printf("a ^ b = %d\n", a ^ b);   // XOR
+    printf("a << 1 = %d\n", a << 1); // Left Shift
+    printf("a >> 1 = %d\n", a >> 1); // Right Shift
+    return 0;
+}
+```
+**7.Conditional (Ternary) Operator**
+Shorthand if-else
+**Syntax**
 ```
 condition ? true : false
 ```
-
-- **Comma Operator**
+**Example**
 ```
-int a, b, c;
-c = (a = 3, b = 4, a + b); // c = 7
+#include <stdio.h>
+ int main()
+ {
+    int a = 10, b = 5, result;
+    int x = 6, y = 3;
+    printf("\nConditional (Ternary) Operator:\n");
+    int max = (a > b) ? a : b;
+    printf("Max between a and b = %d\n", max);
+    return 0;
+}
 ```
-
-- **sizeof Operator**
+**8.Comma Operator**
+- Evaluates multiple expressions from left to right.
+- The last expression’s value is assigned.
+**Example**
 ```
-printf("%lu", sizeof(int));  // commonly 4 bytes
+#include <stdio.h>
+ int main()
+ {
+    int a = 10, b = 5, result;
+    int x = 6, y = 3;
+    printf("\nComma Operator:\n");
+    int c;
+    c = (a = 2, b = 3, a + b);  // evaluates left to right, result is last expression
+    printf("Using comma operator: c = %d\n", c);
+    return 0;
+}
+```
+**9.sizeof Operator**
+- Returns the size in bytes of a data type or variable.
+**Example**
+```
+#include <stdio.h>
+ int main()
+ {
+    int a = 10, b = 5, result;
+    int x = 6, y = 3;
+    printf("\nsizeof Operator:\n");
+    printf("sizeof(int) = %lu bytes\n", sizeof(int));
+    printf("sizeof(float) = %lu bytes\n", sizeof(float));
+    printf("sizeof(char) = %lu bytes\n", sizeof(char));
+    printf("sizeof(double) = %lu bytes\n", sizeof(double));
+    printf("sizeof(a) = %lu bytes\n", sizeof(a));
+    return 0;
+}
 ```
 ## Control Statments 
 
