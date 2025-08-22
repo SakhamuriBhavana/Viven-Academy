@@ -687,11 +687,11 @@ int main(void) {
 
 - There are 3 main types of loops in C:
 
-1. For loop
+        1. For loop
 
-2. While loop
+        2. While loop
 
-3. Do-while loop
+        3. Do-while loop
 
 **1. For Loop** :
 
@@ -868,13 +868,13 @@ int main()
 - Jump statements are used to alter the normal flow of execution in loops or programs.
 - There are 3 main jump statements:
 
-1.Break
+     1.Break
 
-2.Continue
+     2.Continue
 
-3.Goto
+     3.Goto
 
-4.Return
+     4.Return
 
 **1. Break**:
 
