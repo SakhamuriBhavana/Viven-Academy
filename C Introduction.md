@@ -313,6 +313,7 @@ Operators are symbols that perform operations on data.(or) Operators are symbols
 
 **1.Arithmetic Operators** :
 perform basic math (+ - * / %).
+
 **Example**
 ```
 #include <stdio.h>
@@ -331,6 +332,7 @@ int main()
 ```
 **2.Relational Operators** :
 Compare values ( == != > < >= <= ).
+
 **Example**
 ```
 #include <stdio.h>
@@ -349,6 +351,7 @@ int main()
   
 **3.Logical Operators** :
 Compare Conditions (&& || !).
+
 **Example**
 ```
  #include <stdio.h>
@@ -366,6 +369,7 @@ Compare Conditions (&& || !).
 
 **4.Assignment Operators** :
 Shorthand Updates (= += -= *= /= %=). 
+
 **Example**
 ```
  #include <stdio.h>
@@ -389,6 +393,7 @@ Shorthand Updates (= += -= *= /= %=).
 ```
 **5.Increment/Decrement Operators** :
 Increase/decrease by 1 (++ --). 
+
 **Example**
 ```
  #include <stdio.h>
@@ -410,6 +415,7 @@ Increase/decrease by 1 (++ --).
 ```
 **6.Bitwise Operators** :
 Operate at binary level (& | ^ ~ << >>).
+
 **Example**
 ```
  #include <stdio.h>
@@ -428,10 +434,12 @@ Operate at binary level (& | ^ ~ << >>).
 ```
 **7.Conditional (Ternary) Operator**
 Shorthand if-else
+
 **Syntax**
 ```
 condition ? true : false
 ```
+
 **Example**
 ```
 #include <stdio.h>
@@ -448,6 +456,7 @@ condition ? true : false
 **8.Comma Operator**
 - Evaluates multiple expressions from left to right.
 - The last expression’s value is assigned.
+
 **Example**
 ```
 #include <stdio.h>
@@ -464,6 +473,7 @@ condition ? true : false
 ```
 **9.sizeof Operator**
 - Returns the size in bytes of a data type or variable.
+
 **Example**
 ```
 #include <stdio.h>
