@@ -311,7 +311,7 @@ Operators are symbols that perform operations on data.(or) Operators are symbols
 
 ## Types of Operators
 
-**1.Arithmetic Operators** :
+**1. Arithmetic Operators** :
 perform basic math (+ - * / %).
 
 **Example**
@@ -330,7 +330,7 @@ int main()
     return 0;
 }
 ```
-**2.Relational Operators** :
+**2. Relational Operators** :
 Compare values ( == != > < >= <= ).
 
 **Example**
@@ -349,7 +349,7 @@ int main()
 }
 ```
   
-**3.Logical Operators** :
+**3. Logical Operators** :
 Compare Conditions (&& || !).
 
 **Example**
@@ -367,7 +367,7 @@ Compare Conditions (&& || !).
 }
 ```
 
-**4.Assignment Operators** :
+**4. Assignment Operators** :
 Shorthand Updates (= += -= *= /= %=). 
 
 **Example**
@@ -391,7 +391,7 @@ Shorthand Updates (= += -= *= /= %=).
     return 0;
 }
 ```
-**5.Increment/Decrement Operators** :
+**5. Increment/Decrement Operators** :
 Increase/decrease by 1 (++ --). 
 
 **Example**
@@ -413,7 +413,7 @@ Increase/decrease by 1 (++ --).
     return 0;
 }
 ```
-**6.Bitwise Operators** :
+**6. Bitwise Operators** :
 Operate at binary level (& | ^ ~ << >>).
 
 **Example**
@@ -432,7 +432,7 @@ Operate at binary level (& | ^ ~ << >>).
     return 0;
 }
 ```
-**7.Conditional (Ternary) Operator**
+**7. Conditional (Ternary) Operator**
 Shorthand if-else
 
 **Syntax**
@@ -453,7 +453,7 @@ condition ? true : false
     return 0;
 }
 ```
-**8.Comma Operator**
+**8. Comma Operator**
 - Evaluates multiple expressions from left to right.
 - The last expression’s value is assigned.
 
@@ -471,7 +471,7 @@ condition ? true : false
     return 0;
 }
 ```
-**9.sizeof Operator**
+**9. Sizeof Operator**
 - Returns the size in bytes of a data type or variable.
 
 **Example**
@@ -574,7 +574,7 @@ int main(void) {
     return 0;
 }
 ```
-**3.Else-If Ladder**
+**3. Else-If Ladder**
 
 - Test multiple exclusive conditions in order.
 
@@ -630,7 +630,7 @@ int main(void) {
 }
 ```
 
-**4.Switch Statement**
+**4. Switch Statement**
 
 - Branch based on the value of an expression (integral types like int, char, enums).
 
