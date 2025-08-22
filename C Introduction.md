@@ -492,9 +492,9 @@ condition ? true : false
 ```
 ## Control Statments 
 
-**Control structures** decide **how** and **in what order** statements run in a C program.
+- **Control structures** decide **how** and **in what order** statements run in a C program.
 
-They are grouped into:
+  They are grouped into:
 - **Decision-making (branching)**: `if`, `if-else`, `else-if ladder`, `switch`
 - **Looping (iteration)**: `for`, `while`, `do-while`
 - **Jump statements**: `break`, `continue`, `goto`, `return`
@@ -875,7 +875,7 @@ int main()
 
 - Control jumps to the next iteration of the loop.
 
-  **FlowChart**
+**FlowChart**
 ```
    ┌─────────────┐
    │ Loop Start  │
