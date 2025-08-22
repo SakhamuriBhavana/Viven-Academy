@@ -360,7 +360,7 @@ if (condition) {
 }
 ```
 **FLow Chart**
-
+```
    ┌───────────────┐
    │   Condition?  │
    └───────┬───────┘
@@ -372,7 +372,7 @@ if (condition) {
            │ 
            ▼
         Next step
-
+```
 
 **Example**
 ```
@@ -398,7 +398,7 @@ if (condition) {
 }
 ```
 **Flowchart**
-
+```
    ┌───────────────┐
    │   Condition?  │
    └───────┬───────┘
@@ -410,7 +410,7 @@ if (condition) {
            │
            ▼
         Next step
-
+```
 **Example**
 ```
 #include <stdio.h>
@@ -436,7 +436,7 @@ else { ... }
 ```
 
 **FlowChart**
-
+```
    ┌───────────────┐
    │ Condition 1 ? │
    └───────┬───────┘
@@ -464,7 +464,7 @@ else { ... }
 
    ...
    Else → Default Statement
-
+```
 
 **Example**
 ```
@@ -502,7 +502,7 @@ switch (expr) {
 ```
 
 **FlowCahrt**
-
+```
     ┌─────────────┐
     │ Switch(var) │
     └───────┬─────┘
@@ -514,7 +514,7 @@ switch (expr) {
    └─────┘   └─────┘
        │       │
        └───► Default
-
+```
 
 **Example**
 ```
