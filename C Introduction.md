@@ -306,7 +306,7 @@ A group of statements enclosed within { }.
     printf("%d", a + b);
 }
 ```
-**9. Operators in C**
+**9. Operators**
 
 Operators are symbols that perform operations on data.
 
@@ -339,6 +339,163 @@ c = (a = 3, b = 4, a + b); // c = 7
 ```
 printf("%lu", sizeof(int));  // commonly 4 bytes
 ```
+## Control Statments 
+
+**Control structures** decide **how** and **in what order** statements run in a C program.
+
+They are grouped into:
+- **Decision-making (branching)**: `if`, `if-else`, `else-if ladder`, `switch`
+- **Looping (iteration)**: `for`, `while`, `do-while`
+- **Jump statements**: `break`, `continue`, `goto`, `return`
+
+ ## A) Decision-Making (Branching)
+
+**1. if Statement**
+ -  Runs a block **only if** the condition is true (non-zero).
+
+**Syntax:**
+```c
+if (condition) {
+    // executes when condition is true
+}
+```
+**FLow Chart**
+
+flowchart TD
+  A[Start] --> B{Condition true?}
+  B -- Yes --> C[Execute 'if' block]
+  B -- No --> D[Skip block]
+  C --> E[Continue]
+  D --> E
+
+**Example**
+```
+#include <stdio.h>
+int main(void) {
+    int x = 7;
+    if (x > 0) {
+        printf("x is positive\n");
+    }
+    return 0;
+}
+```
+**2. If-Else Statement**
+
+Choose between two paths: if condition is true → run A, else → run B.
+
+**Syntax:**
+```
+if (condition) {
+    // true block
+} else {
+    // false block
+}
+```
+**Flowchart**
+
+flowchart TD
+  A[Start] --> B{Condition true?}
+  B -- Yes --> C[True block]
+  B -- No --> D[False block]
+  C --> E[Continue]
+  D --> E
+
+**Example**
+
+#include <stdio.h>
+int main(void) {
+    int n = 12;
+    if (n % 2 == 0)
+        printf("Even\n");
+    else
+        printf("Odd\n");
+    return 0;
+}
+
+**3.Else-If Ladder**
+
+Test multiple exclusive conditions in order.
+
+**Syntax:**
+```
+if (cond1) { ... }
+else if (cond2) { ... }
+else if (cond3) { ... }
+else { ... }
+```
+
+**FlowChart**
+
+flowchart TD
+  A[Start] --> B{cond1?}
+  B -- Yes --> C[Block 1] --> H[Continue]
+  B -- No --> D{cond2?}
+  D -- Yes --> E[Block 2] --> H
+  D -- No --> F{cond3?}
+  F -- Yes --> G[Block 3] --> H
+  F -- No --> I[Else Block] --> H
+
+**Example**
+```
+#include <stdio.h>
+int main(void) {
+    int marks = 83;
+    if (marks >= 90) printf("A\n");
+    else if (marks >= 75) printf("B\n");
+    else if (marks >= 60) printf("C\n");
+    else printf("D\n");
+    return 0;
+}
+```
+
+**4.Switch Statement**
+
+Branch based on the value of an expression (integral types like int, char, enums).
+
+**Key Points**
+
+- case labels must be **constant and unique**.
+
+- Use break to prevent **fall-through** (executing next cases unintentionally).
+
+- default runs if no case matches (optional but recommended).
+
+**Syntax**
+```
+switch (expr) {
+    case C1: /* block */ break;
+    case C2: /* block */ break;
+    ...
+    default: /* block */
+}
+```
+
+**FlowCahrt**
+
+flowchart TD
+  A[Start] --> B[Evaluate expression]
+  B --> C{Matches Case?}
+  C -- Case 1 --> D[Block 1] --> E[break] --> H[Continue]
+  C -- Case 2 --> F[Block 2] --> E
+  C -- No match --> G[default Block] --> H
+
+**Example**
+```
+#include <stdio.h>
+int main(void) {
+    int choice = 2;
+    switch (choice) {
+        case 1: printf("Start\n"); break;
+        case 2: printf("Settings\n"); break;
+        case 3: printf("Exit\n"); break;
+        default: printf("Invalid\n");
+    }
+    return 0;
+}
+```
+
+ ## B) Looping (Literation)
+ 
 
 
 
