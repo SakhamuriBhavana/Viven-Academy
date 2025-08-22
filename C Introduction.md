@@ -814,6 +814,142 @@ int main()
     return 0;
 }
 ```
+ ## C) Jump Statements
+- Jump statements are used to alter the normal flow of execution in loops or programs.
+- There are 3 main jump statements:
+1.break
+
+2.continue
+
+3.goto
+
+**1. Break**:
+
+- Used to terminate a loop or switch immediately.
+
+- Control moves to the statement after the loop/switch.
+
+**FlowChart**
+```
+   ┌─────────────┐
+   │ Loop Start  │
+   └─────┬───────┘
+         ▼
+   ┌─────────────┐
+   │ Condition ? │
+   └───┬─────┬───┘
+       │Yes  │No → Exit
+       ▼
+   ┌─────────────┐
+   │ Statement   │
+   └─────┬───────┘
+         ▼
+   ┌─────────────┐
+   │ break ?     │
+   └───┬─────┬───┘
+       │Yes  │No
+       ▼     ▼
+     Exit   Continue Loop
+```
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int i;
+    for(i = 1; i <= 10; i++)
+    {
+        if(i == 5)
+        {
+            break;  // loop stops when i = 5
+        }
+        printf("%d ", i);
+    }
+    return 0;
+}
+```
+**2. Continue**:
+
+- Used to skip the current iteration of the loop.
+
+- Control jumps to the next iteration of the loop.
+
+  **FlwoChart**
+```
+   ┌─────────────┐
+   │ Loop Start  │
+   └─────┬───────┘
+         ▼
+   ┌─────────────┐
+   │ Condition ? │
+   └───┬─────┬───┘
+       │Yes  │No → Exit
+       ▼
+   ┌─────────────┐
+   │ continue ?  │
+   └───┬─────┬───┘
+       │Yes  │No
+       ▼     ▼
+   Skip Iter. Statement
+         │
+         ▼
+     Next Iteration
+```
+
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int i;
+    for(i = 1; i <= 10; i++)
+    {
+        if(i == 5)
+        {
+            continue; // skips printing 5
+        }
+        printf("%d ", i);
+    }
+    return 0;
+}
+```
+**3. Goto**:
+
+- Transfers control to a label in the program.
+
+- Should be used carefully (not recommended in structured programming).
+
+**FlowChart**
+```
+   ┌─────────────┐
+   │ Statement 1 │
+   └─────┬───────┘
+         ▼
+   ┌─────────────┐
+   │ goto Label  │
+   └─────┬───────┘
+         ▼
+   ┌─────────────┐
+   │ Label: stmt │
+   └─────────────┘
+```
+
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int i = 1;
+    loop:
+        if(i <= 5)
+        {
+            printf("%d ", i);
+            i++;
+            goto loop;  // jumps back to label
+        }
+    return 0;
+}
+```
 
 
 
