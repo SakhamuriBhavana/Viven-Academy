@@ -432,7 +432,7 @@ Operate at binary level (& | ^ ~ << >>).
     return 0;
 }
 ```
-**7. Conditional (Ternary) Operator**
+**7. Conditional (Ternary) Operator** :
 Shorthand if-else
 
 **Syntax**
