@@ -683,7 +683,135 @@ int main(void) {
 ```
 
  ## B) Looping (Literation)
- 
+ - A loop is used when we need to execute a block of statements repeatedly until a certain condition is true.
+
+- There are 3 main types of loops in C:
+
+1. For loop
+
+2. While loop
+
+3. Do-while loop
+
+**1. For Loop**
+Used when we know the number of iterations in advance.
+
+**Syntax**
+```
+for(initialization; condition; increment/decrement) {
+    // statements
+}
+```
+**FlowChart**
+```
+ ┌──────────────┐
+ │ Initialization│
+ └──────┬───────┘
+        ▼
+ ┌──────────────┐
+ │  Condition?  │
+ └───┬─────┬────┘
+     │Yes  │No
+     ▼     ▼
+ ┌──────────────┐
+ │  Statement   │   → Exit loop
+ └──────┬───────┘
+        │
+   ┌────▼────┐
+   │ Update  │
+   └─────────┘
+        │
+        └──> Back to Condition
+```
+
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int i;
+    for(i = 1; i <= 5; i++)
+    {
+        printf("%d ", i);
+    }
+    return 0;
+}
+```
+
+**2. While Loop**
+Used when the number of iterations is not known in advance.
+
+**Syntax**
+```
+while(condition) {
+    // statements
+}
+```
+**FlowChart**
+```
+ ┌──────────────┐
+ │  Condition?  │
+ └───┬─────┬────┘
+     │Yes  │No
+     ▼     ▼
+ ┌──────────────┐
+ │  Statement   │   → Exit loop
+ └──────┬───────┘
+        │
+        └──> Back to Condition
+```
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int i = 1;
+    while(i <= 5)
+    {
+        printf("%d ", i);
+        i++;
+    }
+    return 0;
+}
+```
+**3. Do-While Loop**
+Similar to while, but it executes at least once even if the condition is false.
+
+**Syntax**
+```
+do {
+    // statements
+} while(condition);
+```
+
+**FlowChart**
+```
+ ┌──────────────┐
+ │  Statement   │
+ └──────┬───────┘
+        │
+ ┌──────▼──────┐
+ │ Condition ? │
+ └───┬─────┬───┘
+     │Yes  │No
+     └─> Back │
+         └────┘
+```
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int i = 1;
+    do
+    {
+        printf("%d ", i);
+        i++;
+    } while(i <= 5);
+    return 0;
+}
+```
+
 
 
 
