@@ -102,7 +102,6 @@ The basic elements of the C language are the fundamental building blocks that he
 6.Datatypes
 7.Expressions
 8.statements
-9.Operators 
 
 **1. Character Set**
 
@@ -306,27 +305,28 @@ A group of statements enclosed within { }.
     printf("%d", a + b);
 }
 ```
-**9. Operators**
+## Operators
 
-Operators are symbols that perform operations on data.
+Operators are symbols that perform operations on data.(or) Operators are symbols that perform operations on variables and values.
 
 ## Types of Operators
 
-- **Arithmetic Operators** : + - * / %
+- **Arithmetic Operators** : perform basic math (+ - * / %). 
 
-- **Relational Operators** : == != > < >= <=
+- **Relational Operators** :Compare values ( == != > < >= <= ).
 
-- **Logical Operators** : && || !
+- **Logical Operators** : Compare Conditions (&& || !). 
 
-- **Assignment Operators** : = += -= *= /= %=
+- **Assignment Operators** : Shorthand Updates (= += -= *= /= %=). 
 
-- **Increment/Decrement Operators** : ++ --
+- **Increment/Decrement Operators** : Increase/decrease by 1 (++ --). 
 
-- **Bitwise Operators** : & | ^ ~ << >>
+- **Bitwise Operators** : Operate at binary level (& | ^ ~ << >>).
 
 - **Conditional (Ternary) Operator**
+  Shorthand if-else
 ```
-int result = (a > b) ? a : b;
+condition ? true : false
 ```
 
 - **Comma Operator**
@@ -350,7 +350,7 @@ They are grouped into:
 
  ## A) Decision-Making (Branching)
 
-**1. if Statement**
+**1. If Statement**
  -  Runs a block **only if** the condition is true (non-zero).
 
 **Syntax:**
@@ -361,12 +361,18 @@ if (condition) {
 ```
 **FLow Chart**
 
-flowchart TD
-  A[Start] --> B{Condition true?}
-  B -- Yes --> C[Execute 'if' block]
-  B -- No --> D[Skip block]
-  C --> E[Continue]
-  D --> E
+   ┌───────────────┐
+   │   Condition?  │
+   └───────┬───────┘
+           │Yes
+           ▼
+     ┌────────────┐
+     │ Statement  │
+     └────────────┘
+           │ 
+           ▼
+        Next step
+
 
 **Example**
 ```
@@ -381,7 +387,7 @@ int main(void) {
 ```
 **2. If-Else Statement**
 
-Choose between two paths: if condition is true → run A, else → run B.
+- Choose between two paths: if condition is true → run A, else → run B.
 
 **Syntax:**
 ```
@@ -393,15 +399,20 @@ if (condition) {
 ```
 **Flowchart**
 
-flowchart TD
-  A[Start] --> B{Condition true?}
-  B -- Yes --> C[True block]
-  B -- No --> D[False block]
-  C --> E[Continue]
-  D --> E
+   ┌───────────────┐
+   │   Condition?  │
+   └───────┬───────┘
+       Yes │  
+           ▼
+  ┌────────────┐ No  ┌────────────┐
+  │ Statement1 │ --> │ Statement2 │
+  └────────────┘     └────────────┘
+           │
+           ▼
+        Next step
 
 **Example**
-
+```
 #include <stdio.h>
 int main(void) {
     int n = 12;
@@ -411,10 +422,10 @@ int main(void) {
         printf("Odd\n");
     return 0;
 }
-
+```
 **3.Else-If Ladder**
 
-Test multiple exclusive conditions in order.
+- Test multiple exclusive conditions in order.
 
 **Syntax:**
 ```
@@ -426,14 +437,34 @@ else { ... }
 
 **FlowChart**
 
-flowchart TD
-  A[Start] --> B{cond1?}
-  B -- Yes --> C[Block 1] --> H[Continue]
-  B -- No --> D{cond2?}
-  D -- Yes --> E[Block 2] --> H
-  D -- No --> F{cond3?}
-  F -- Yes --> G[Block 3] --> H
-  F -- No --> I[Else Block] --> H
+   ┌───────────────┐
+   │ Condition 1 ? │
+   └───────┬───────┘
+       Yes │ No
+           ▼
+   ┌───────────────┐
+   │  Statement 1  │
+   └───────────────┘
+           │
+           ▼
+        Next step
+           
+   If No → Check next:
+   ┌───────────────┐
+   │ Condition 2 ? │
+   └───────┬───────┘
+       Yes │ No
+           ▼
+   ┌───────────────┐
+   │  Statement 2  │
+   └───────────────┘
+           │
+           ▼
+        Next step
+
+   ...
+   Else → Default Statement
+
 
 **Example**
 ```
@@ -450,7 +481,7 @@ int main(void) {
 
 **4.Switch Statement**
 
-Branch based on the value of an expression (integral types like int, char, enums).
+- Branch based on the value of an expression (integral types like int, char, enums).
 
 **Key Points**
 
@@ -472,12 +503,18 @@ switch (expr) {
 
 **FlowCahrt**
 
-flowchart TD
-  A[Start] --> B[Evaluate expression]
-  B --> C{Matches Case?}
-  C -- Case 1 --> D[Block 1] --> E[break] --> H[Continue]
-  C -- Case 2 --> F[Block 2] --> E
-  C -- No match --> G[default Block] --> H
+    ┌─────────────┐
+    │ Switch(var) │
+    └───────┬─────┘
+        ┌───┴───┐
+        ▼       ▼
+   Case 1    Case 2
+   ┌─────┐   ┌─────┐
+   │Stmt1│   │Stmt2│
+   └─────┘   └─────┘
+       │       │
+       └───► Default
+
 
 **Example**
 ```
