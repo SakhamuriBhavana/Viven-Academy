@@ -311,17 +311,17 @@ Operators are symbols that perform operations on data.
 
 ## Types of Operators
 
--**Arithmetic Operators:** + - * / %
+-**Arithmetic Operators**: + - * / %
 
--**Relational Operators:** == != > < >= <=
+-**Relational Operators**: == != > < >= <=
 
--**Logical Operators:** && || !
+-**Logical Operators**: && || !
 
--**Assignment Operators:** = += -= *= /= %=
+-**Assignment Operators**: = += -= *= /= %=
 
--**Increment/Decrement Operators:** ++ --
+-**Increment/Decrement Operators**: ++ --
 
--**Bitwise Operators:** & | ^ ~ << >>
+-**Bitwise Operators**: & | ^ ~ << >>
 
 -**Conditional (Ternary) Operator**
 ```
