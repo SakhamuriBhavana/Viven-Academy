@@ -818,11 +818,13 @@ int main()
 - Jump statements are used to alter the normal flow of execution in loops or programs.
 - There are 3 main jump statements:
 
-1.break
+1.Break
 
-2.continue
+2.Continue
 
-3.goto
+3.Goto
+
+4.Return
 
 **1. Break**:
 
@@ -949,6 +951,45 @@ int main()
             goto loop;  // jumps back to label
         }
     return 0;
+}
+```
+
+**4. Return**:
+
+- return is used inside a function to send a value (or no value) back to the calling function.
+
+- It also terminates the execution of the current function immediately.
+
+- In main(), return 0; indicates successful execution of the program.
+
+**FlowChart**
+```
+ ┌─────────────┐
+ │ Function    │
+ │ Execution   │
+ └─────┬───────┘
+       ▼
+ ┌─────────────┐
+ │ return ?    │
+ └───┬─────┬───┘
+     │Yes  │No
+     ▼     ▼
+Terminate   Continue
+Function    Function
+```
+
+**Example**
+```
+#include <stdio.h>
+int add(int a, int b)
+{
+    return a + b;  // returns sum
+}
+int main()
+{
+    int result = add(5, 7);
+    printf("Sum = %d\n", result);
+    return 0;  // successful execution
 }
 ```
 
