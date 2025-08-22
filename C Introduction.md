@@ -815,7 +815,7 @@ int main()
 }
 ```
 
-**4.Nested-Loop**
+**4. Nested-Loop**
 
 - A nested loop means having one loop inside another loop.
 
