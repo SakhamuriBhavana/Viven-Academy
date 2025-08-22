@@ -256,13 +256,90 @@ a + b * 5;
 ```
 **8. Statements**
 
-Instructions that the C program executes.
+A **statement** in C is a single instruction that tells the computer to do something.  
+Each statement ends with a semicolon (`;`).
 
-**Example:**
+## Types of Statements
+
+**1. Declaration Statements**
+Used to declare variables.
+```c
+int a = 10;
+float b;
 ```
-int x = 10;  // declaration statement
-x++;         // increment statement
+**2. Expression Statements**
+
+Used to perform calculations or operations.
 ```
+a + b;  
+x = y * 5;
+```
+**3. Assignment Statements**
+
+Used to assign values to variables.
+```
+x = 20;
+```
+**4. Control Statements**
+
+Used to control the flow of the program.
+```
+if(x > 10) {
+    printf("Big number");
+}
+```
+**5. Increment/Decrement Statements**
+
+Used to increase or decrease the value of a variable by 1.
+```
+x++;   // increment
+y--;   // decrement
+```
+**6. Compound Statements (Blocks)**
+
+A group of statements enclosed within { }.
+```
+{
+    int a = 5;
+    int b = 10;
+    printf("%d", a + b);
+}
+```
+**9. Operators in C**
+
+Operators are symbols that perform operations on data.
+
+## Types of Operators
+
+-**Arithmetic Operators:** + - * / %
+
+-**Relational Operators:** == != > < >= <=
+
+-**Logical Operators:** && || !
+
+-**Assignment Operators:** = += -= *= /= %=
+
+-**Increment/Decrement Operators:** ++ --
+
+-**Bitwise Operators:** & | ^ ~ << >>
+
+-**Conditional (Ternary) Operator**
+```
+int result = (a > b) ? a : b;
+```
+
+-**Comma Operator**
+```
+int a, b, c;
+c = (a = 3, b = 4, a + b); // c = 7
+```
+
+-**sizeof Operator**
+```
+printf("%lu", sizeof(int));  // commonly 4 bytes
+```
+
+
 
 
 
