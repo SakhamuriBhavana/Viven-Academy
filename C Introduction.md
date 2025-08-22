@@ -817,6 +817,7 @@ int main()
  ## C) Jump Statements
 - Jump statements are used to alter the normal flow of execution in loops or programs.
 - There are 3 main jump statements:
+
 1.break
 
 2.continue
@@ -874,7 +875,7 @@ int main()
 
 - Control jumps to the next iteration of the loop.
 
-  **FlwoChart**
+  **FlowChart**
 ```
    ┌─────────────┐
    │ Loop Start  │
