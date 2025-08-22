@@ -693,9 +693,9 @@ int main(void) {
 
 3. Do-while loop
 
-**1. For Loop**:
+**1. For Loop** :
 
-Used when we know the number of iterations in advance.
+- Used when we know the number of iterations in advance.
 
 **Syntax**
 ```
@@ -739,9 +739,9 @@ int main()
 }
 ```
 
-**2. While Loop**:
+**2. While Loop** :
 
-Used when the number of iterations is not known in advance.
+- Used when the number of iterations is not known in advance.
 
 **Syntax**
 ```
@@ -776,9 +776,9 @@ int main()
     return 0;
 }
 ```
-**3. Do-While Loop**:
+**3. Do-While Loop** :
 
-Similar to while, but it executes at least once even if the condition is false.
+- Similar to while, but it executes at least once even if the condition is false.
 
 **Syntax**
 ```
