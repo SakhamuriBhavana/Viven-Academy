@@ -117,7 +117,7 @@ These are valid characters used in C programs:
 
 **2. Keywords (Reserved Words)**
 
-These are words that have special meaning in C. 
+- These are words that have special meaning in C. 
 
 Examples:
 ```
@@ -136,7 +136,7 @@ int age; // 'age' is an identifier
 ```
 **4. Constants**
 
-Fixed values that do not change during execution:
+- Fixed values that do not change during execution:
 
 - **Integer constants**: 10, -25
 
@@ -148,7 +148,7 @@ Fixed values that do not change during execution:
 
 **5. Variables**
 
-Used to store data. Each variable must be declared with a type.
+- Used to store data. Each variable must be declared with a type.
 
 **Example:**
 ```
@@ -157,7 +157,7 @@ float price = 25.5;
 ```
 **6. Data Types**
 
-Defines the type of data a variable can hold:
+- Defines the type of data a variable can hold:
 
 - **Basic:** int, float, char, double
 
@@ -248,7 +248,7 @@ These can store only positive numbers (and zero).
 
 **7. Expressions**
 
-A combination of variables, constants, and operators that produces a value.
+- A combination of variables, constants, and operators that produces a value.
 
 **Example**
 ```
@@ -256,7 +256,7 @@ a + b * 5;
 ```
 **8. Statements**
 
-A **statement** in C is a single instruction that tells the computer to do something.  
+- A **statement** in C is a single instruction that tells the computer to do something.  
 Each statement ends with a semicolon (`;`).
 
 ## Types of Statements
@@ -307,7 +307,7 @@ A group of statements enclosed within { }.
 ```
 ## Operators And Expressions
 
-Operators are symbols that perform operations on data.(or) Operators are symbols that perform operations on variables and values.
+- Operators are symbols that perform operations on data.(or) Operators are symbols that perform operations on variables and values.
 
 ## Types of Operators
 
@@ -493,6 +493,7 @@ condition ? true : false
 ## Types of Conversions
 
 - When an expression involves different data types, C automatically converts one type to another to avoid data loss or mismatch. This process is called Type Conversion.
+**Flowchart**
 ```
              +-------------------+
              |   Type Conversion |
