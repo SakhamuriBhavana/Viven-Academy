@@ -305,7 +305,7 @@ A group of statements enclosed within { }.
     printf("%d", a + b);
 }
 ```
-## Operators
+## Operators And Expressions
 
 Operators are symbols that perform operations on data.(or) Operators are symbols that perform operations on variables and values.
 
@@ -490,6 +490,157 @@ condition ? true : false
     return 0;
 }
 ```
+## Types of Conversions
+
+- When an expression involves different data types, C automatically converts one type to another to avoid data loss or mismatch. This process is called Type Conversion.
+```
+             +-------------------+
+             |   Type Conversion |
+             +-------------------+
+                     |
+        +------------+-------------+
+        |                          |
++----------------+         +-----------------+
+| Implicit (Auto)|         | Explicit (Cast) |
++----------------+         +-----------------+
+| Small → Large  |         | Manual by user  |
+| e.g., int→float|         | (datatype)expr  |
++----------------+         +-----------------+
+```
+**1.Implict Conversion** :
+
+- Done automatically by the compiler.
+
+- Also called Type Promotion.
+
+- Converts smaller data type → larger data type to prevent data loss.
+
+- Conversion hierarchy in C:
+
+  char → int → float → double
+
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int a = 5;
+    float b = 2.5;
+    float result = a + b;   // int is promoted to float
+    printf("Result = %f", result);
+    return 0;
+}
+```
+
+**2. Explicit Conversion**
+
+Done manually by the programmer.
+
+**Syntax:**
+```
+(datatype) expression
+```
+
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int a = 5, b = 2;
+    float result = (float)a / b;  // int is explicitly converted to float
+    printf("Result = %f", result);
+    return 0;
+}
+```
+## Operator Precedence & Associativity
+
+- Precedence: Priority of operator.
+
+- Associativity: Direction of evaluation (left-to-right or right-to-left).
+
+| Operator                               | Precedence | Associativity |          |              |
+| -------------------------------------- | ---------- | ------------- | -------- | ------------ |
+| `()` (parentheses), `[]`, `->`         | Highest    | Left → Right  |          |              |
+| Unary (`++`, `--`, `!`, `~`, `(type)`) | High       | Right → Left  |          |              |
+| `*`, `/`, `%`                          | Next       | Left → Right  |          |              |
+| `+`, `-`                               | Medium     | Left → Right  |          |              |
+| `<`, `>`, `<=`, `>=`                   | Lower      | Left → Right  |          |              |
+| `==`, `!=`                             | Lower      | Left → Right  |          |              |
+| `&&`                                   | Low        | Left → Right  |          |              |
+| \`                                     |            | \`            | Very Low | Left → Right |
+| `=`                                    | Assignment | Right → Left  |          |              |
+| `,` (comma)                            | Lowest     | Left → Right  |          |              |
+
+**Example**
+```
+int x = 10, y = 5, z = 2;
+int result = x + y * z;   // '*' has higher precedence than '+'
+printf("%d", result);     // 20, not 30
+```
+## Role of Parentheses
+
+- Parentheses () override precedence rules.
+
+- Expressions inside parentheses are always evaluated first.
+
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int a = 10, b = 5, c = 2;
+    int result1 = a + b * c;       // Without parentheses: 10 + (5*2) = 20
+    int result2 = (a + b) * c;     // With parentheses: (10+5) * 2 = 30
+    printf("Result1 = %d\n", result1);
+    printf("Result2 = %d\n", result2);
+    return 0;
+}
+```
+## Order of Evaluation of Operands
+
+- Precedence decides which operator is applied first.
+
+- Associativity decides direction (left-to-right or right-to-left).
+
+- But order of evaluation of operands is NOT always fixed in C.
+
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int a = 2, b = 3, c = 4;
+    int result = a + b * c; // Multiplication has higher precedence than addition
+    printf("Result = %d", result); // 14
+    return 0;
+}
+```
+**Flow Diagram for Expression Evaluation**
+```
+           +-----------------------+
+           |   Expression Written  |
+           +-----------------------+
+                       |
+                       v
+           +-----------------------+
+           | Check for Parentheses |
+           +-----------------------+
+                       |
+                       v
+           +-----------------------+
+           | Apply Precedence Rule |
+           +-----------------------+
+                       |
+                       v
+           +-----------------------+
+           | Apply Associativity   |
+           +-----------------------+
+                       |
+                       v
+           +-----------------------+
+           | Evaluate Expression   |
+           +-----------------------+
+```
 ## Control Statments 
 
 - **Control structures** decide **how** and **in what order** statements run in a C program.
@@ -574,6 +725,136 @@ int main(void) {
     return 0;
 }
 ```
+**3.Nesting of if…else**
+
+- Nesting means placing one if…else statement inside another.
+
+- Useful when we need to check multiple conditions step by step.
+
+**Syntax:**
+```
+if (condition1) {
+    if (condition2) {
+        // code if both condition1 and condition2 are true
+    }
+    else {
+        // code if condition1 true but condition2 false
+    }
+}
+else {
+    // code if condition1 is false
+}
+```
+**FlowChart**
+```
+   ┌───────────────┐
+   │  condition1 ? │
+   └───────┬───────┘
+           │Yes
+           ▼
+    ┌───────────────┐
+    │  condition2 ? │
+    └───────┬───────┘
+        Yes │   │ No
+           ▼    ▼
+       [Block1] [Block2]
+           │
+           ▼
+        [Exit]
+           
+Else (No from condition1) → [Block3] → Exit
+```
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int age = 20;
+    int marks = 75;
+
+    if (age >= 18)
+    {
+        if (marks >= 60)
+        {
+            printf("Eligible for admission.\n");
+        } else
+        {
+            printf("Not enough marks.\n");
+        }
+    } else
+    {
+        printf("Not eligible due to age.\n");
+    }
+
+    return 0;
+}
+```
+**Dangling else Problem**
+
+- In C, every else is associated with the nearest unmatched if.
+
+- This creates ambiguity when nested if statements are written without braces {}.
+
+- It is called the dangling else problem.
+
+**FlowChart**
+ ```
+            condition1?
+          /       \
+        Yes        No
+       / 
+ condition2?
+   /      \
+ Yes       No
+ |         |
+[Block1] [Block2]   ← else binds with nearest if (condition2)
+```
+**Example**
+
+**Without Braces (Ambiguous)**
+```
+#include <stdio.h>
+int main()
+{
+    int x = 5;
+    if (x > 0)
+        if (x > 10)
+            printf("x is greater than 10\n");
+        else
+            printf("x is not greater than 10\n");
+    return 0;
+}
+```
+**What happens here?**
+
+- At first glance, it looks like the else belongs to the outer if (x > 0).
+
+- But in C, the rule is:
+
+   - "else is always matched with the nearest unmatched if".
+
+- So the else is actually paired with if (x > 10) (inner one).
+
+**Correct Version (Using Braces)**
+```
+#include <stdio.h>
+int main()
+{
+    int x = 5;
+    if (x > 0)
+    {
+        if (x > 10)
+        {
+            printf("x is greater than 10\n");
+        }
+        else
+         {
+            printf("x is not greater than 10\n");
+         }
+    }
+    return 0;
+}
+```
 **3. Else-If Ladder**
 
 - Test multiple exclusive conditions in order.
@@ -652,7 +933,7 @@ switch (expr) {
 }
 ```
 
-**FlowCahrt**
+**FlowChart**
 ```
     ┌─────────────┐
     │ Switch(var) │
@@ -683,8 +964,8 @@ int main(void) {
 ```
 
  ## B) Looping (Literation)
- - A loop is used when we need to execute a block of statements repeatedly until a certain condition is true.
-
+ 
+- A loop is used when we need to execute a block of statements repeatedly until a certain condition is true.
 - There are 3 main types of loops in C:
 
         1. For loop
@@ -818,9 +1099,7 @@ int main()
 **4. Nested-Loop**
 
 - A nested loop means having one loop inside another loop.
-
 - The inner loop runs completely for each iteration of the outer loop.
-
 - Mostly used in patterns, matrices, and multi-dimensional problems.
 
 **FlowChart**
@@ -864,7 +1143,45 @@ int main()
     return 0;
 }
 ```
+**Infinte Loop**
+
+- An infinite loop runs forever (until the program is terminated externally or you break/return from it). They’re useful for menus, servers, event loops, embedded firmware main loops, etc.
+
+**Flowchart**
+```
+   ┌──────────────┐
+   │   Start      │
+   └──────┬───────┘
+          │
+   ┌──────▼───────┐
+   │   Loop Body  │
+   └──────┬───────┘
+          │
+          ▼
+   ( Condition always true )
+          │
+          └───────► Back to Loop Body
+```
+**Example**
+```
+#include <stdio.h>
+int main()
+{
+    int i = 1;
+    while(1)
+    {   
+        printf("Number: %d\n", i); // infinite loop
+        i++;
+        if(i > 5)
+        {   
+            break; // exit condition using break
+        }
+    }
+    return 0;
+}
+```
  ## C) Jump Statements
+
 - Jump statements are used to alter the normal flow of execution in loops or programs.
 - There are 3 main jump statements:
 
