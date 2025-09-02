@@ -1434,13 +1434,14 @@ We use functions:
  3. Function Call- By the programmer
 
 -  To use a library function in our program we should know
-  (i) Name ofthe function and its purpose
 
- (ii) Type and number of arguments it accepts
+         (i)   Name ofthe function and its purpose
+
+         (ii)  Type and number of arguments it accepts
  
-(iii) Type of the value it returns
+         (iii) Type of the value it returns
 
-(iv)  Name ,of the header file to be included.
+         (iv)  Name ,of the header file to be included.
  
 - We can define any function of our own with the same name as that of any function in the C library.
 - If we do so then the function that we have defined will take precedence over the library function with the same name. 
@@ -1581,11 +1582,11 @@ int main()
  - The calling function sends some values to the called function for communication; these values are called
  arguments or parameters.
 
- - **Actual arguments:**
+**Actual arguments:**
  
  - The arguments which are mentioned in the function cali are known as actual arguments, since these are the values which are actually sent to the called function. Actual arguments can be written in the form of variables, constants or expressions or any function call that returns a value.
 
-- **Formal arguments:**
+**Formal arguments:**
 
 - The name of the arguments, ~hich are mentioned in the function definition are called formal or dummy arguments since they are used just to hold the values that are sent by the calling function.
 
@@ -1630,10 +1631,13 @@ int main()
  
 - The functions can be classified into four categories on the basis of the arguments and return value.
 
-- 1. Functions with no arguments and no return value.
-- 2. Functions with no arguments and a return value.
-- 3. Functions with arguments and no return value.
-- 4. Functions with arguments and a return value.
+                   1. Functions with no arguments and no return value.
+
+                   2. Functions with no arguments and a return value.
+
+                   3. Functions with arguments and no return value.
+
+                   4. Functions with arguments and a return value.
 
 **1. Functions with no arguments and no return value**
 
@@ -1809,11 +1813,11 @@ int main()
 
 - The main() function is a user defined functionbut the name, number and type ofarguments are predefined in the language. The operating system calls. the main function and main() returns a value of integer type to the operating system. If the value returned is zero, it implies that the function has terminated successfully and any nonzero return value indicates an error. If no return value is specified in main() then any garbage value will be returned automatically. Calling the function exit( ) with an integer value is equivalent to returning that value from main(). The definition, declaration and call of main() function.
 
-  1.Function Declaration- By the C compiler
+                 1.Function Declaration- By the C compiler
 
-  2.Function Definition- By the programmer
+                 2.Function Definition- By the programmer
 
-  3.Function Call- By the operating system
+                 3.Function Call- By the operating system
 
 
 
