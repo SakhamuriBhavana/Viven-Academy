@@ -1876,7 +1876,7 @@ void func2(void)
 ```
 Here a and b are declared outside all functions so they are global variables. The variable a will be initialized to 0 automatically since it is a global variable. Now we can use these variables in any function. In func1(), there is a local variable with variable name as global variable. Whenever there is a conflict between a local and global variable, the local variable gets the precedence. So inside func2(), the value of local variable gets printed.
 
-**Static Variable**
+**3. Static Variable**
 
 - Static variables are declared by writing keyword static in front of the declaration. If a static variable is not initialized then it is automatically initialized to 0.
 - A static variable is initialized only once and its value is retained between function calls.
