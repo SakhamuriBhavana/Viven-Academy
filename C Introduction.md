@@ -1819,7 +1819,88 @@ int main()
 
                  3.Function Call- By the operating system
 
+**Local, Global And Static Variables**
 
+**1. Local variable:**
 
+- The variables that are defined within the body of a function or a block are local to that function or block only and are called local variables. These variables are created when function is entered and are destroyed when the function is exited.
+
+**Example**
+```
+void func(void)
+{
+   int a, b;
+}
+```
+Here a and b are local variables which are defined within the body of the function func(). Local variables can be used only in those functions or blocks, in which they are declared. The same variable name may be used in different functions.
+
+**Example**
+```
+void func1(void)
+{
+   int a=2, b=4;
+}
+void func2(void)
+{
+   int a=15, b=20;
+}
+```
+Here values of a=2, b=4 are local to the function func1() and a=15, b=20 are local to the function func2().
+
+**2. Global Variables**
+
+- The variables that are defined outside any function are called global variables. All functions in the program can access and modify global variables. It is useful to declare a variable global if it is to be used by many functions in the program. Global variables are automatically initialized to 0 at the time of declaration.
+
+**Example**
+```
+#include<stdio.h>
+int a, b;  //global variables
+void func1(void);
+void func2(void);
+int main(void)
+{
+   a=5; b=6;
+   printf("\nInside main(): a=%d, b=%d\n", a, b);
+   func1();
+   func2();
+}
+void func1(void)
+{
+   a=15; b=20;
+   printf("\nInside func1(): a=%d, b=%d\n", a, b);
+}
+void func2(void)
+{
+   printf("\nInside func2(): a=%d, b=%d\n", a, b);
+}
+```
+Here a and b are declared outside all functions so they are global variables. The variable a will be initialized to 0 automatically since it is a global variable. Now we can use these variables in any function. In func1(), there is a local variable with variable name as global variable. Whenever there is a conflict between a local and global variable, the local variable gets the precedence. So inside func2(), the value of local variable gets printed.
+
+**Static Variable**
+
+- Static variables are declared by writing keyword static in front of the declaration. If a static variable is not initialized then it is automatically initialized to 0.
+- A static variable is initialized only once and its value is retained between function calls.
+
+**Example**
+```
+#include<stdio.h>
+void func(void);
+int main(void)
+{
+    func();
+    func();
+    func();
+    return 0;
+}
+void func(void)
+{
+    int a=10;
+    static int b=10;
+    printf("a=%d, b=%d\n",a,b);
+    a++;
+    b++;
+}
+```
+Here b is a static variable. First time when the function is called b is initialized to 10. Inside the function, value of b becomes 11. This value is retained and when next time the function is called, value of b is 11 and the initialization is neglected. Similarly when third time function is called, value of b is 12. Note that the variable a, which is not static is initialized on each call and its value is not retained.
 
 
