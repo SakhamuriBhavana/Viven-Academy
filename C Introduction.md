@@ -1407,7 +1407,7 @@ We use functions:
 
 - Basically, functions are used everywhere in C — even main() is a function!
 
-**Advantages of using Functions**
+## Advantages of using Functions:
 
 **What it means** Functions let you break a program into small, named pieces (modules). That gives:
 
@@ -1421,7 +1421,7 @@ We use functions:
 
 - **Easier debugging & testing** — test each function independently.
 
-**Library Functions**
+## Library Functions
 
 - The library funct.ions are formally not a part of the C language, but they are supplied with every C compiler. The source code of the library functions is not given to the user. These functions are precompiled and the user gets only the object code. This object code is linked, to the object code of your program by the linker. Different categories of library functions are grouped together in separate Library files. When we call a library function in our program, the linker selects the code ofthat function from the library file and adds it to the program.
  
@@ -1469,7 +1469,7 @@ int main()
 }
 ```
 
-**User-Defined Functions**
+## User-Defined Functions
 
 - Functions written by the programmer for specific tasks. These types of functions are called as a User-Defined Functions.
 
@@ -1543,7 +1543,7 @@ int main()
 ```
 - If the function defined and not called even once then it's code will never be executed. A function can be called more than once, so the code is, executed each time it is called. The execution of a function finishes either when the closing braces of the function body are reached or if return statement is encountered.
 
-**Return Statement**
+## Return Statement
 
 - Used to exit from a function.
 
@@ -1571,7 +1571,7 @@ int main()
 }
 ```
 
-**Function Parameters and Arguments**
+## Function Parameters and Arguments
 
 - Parameters = variables in function definition.
 
@@ -1617,7 +1617,7 @@ int main()
  }
 ```
 
-**Order of Evaluation of Function Arguments**
+## Order of Evaluation of Function Arguments
 
 - When you call a function with multiple arguments, the C standard does not specify the order in which those arguments are evaluated.
 
@@ -1807,7 +1807,7 @@ int main()
 }
 ```
 
-**main( ) Function**
+## main( ) Function:
  
 - Execution of every C program always begins with the function main(). Each function is called directly or indirectly in main() and after all functions have done their operations, control returns back to main(). There can be only one main() function in a program.
 
@@ -1819,7 +1819,7 @@ int main()
 
                  3.Function Call- By the operating system
 
-**Local, Global And Static Variables**
+## Local, Global And Static Variables:
 
 **1. Local variable:**
 
