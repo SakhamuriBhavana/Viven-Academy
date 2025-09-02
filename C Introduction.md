@@ -125,12 +125,14 @@ int, float, if, else, for, while, return, void, break, continue, switch, case, d
 ```
 **3. Identifiers**
 
+- An identifier is simply the name you give to an element in your program.
+- It is used to identify variables, functions, arrays, structures, labels, etc.
 - Names used to identify variables, functions, arrays, etc.
 - Must begin with a letter (A–Z, a–z) or underscore (_)
 - Can contain letters, digits, and underscores
 - Cannot use C keywords as identifiers
 
-Example:
+**Example:**
 ```
 int age; // 'age' is an identifier
 ```
@@ -1361,6 +1363,457 @@ int main()
 }
 ```
 
+## Functions
+
+**What is a Function**
+
+- A function in C is a block of code (a set of instructions) written to perform a specific task.
+
+- It has a name.
+
+- It can take input (parameters/arguments).
+
+- It can return output (a value) or just perform an action.
+
+- It can be reused multiple times in a program.
+
+- Think of a function like a machine: you give input, it processes it, and gives output.
+
+**Why do we use Functions?**
+
+We use functions because they:
+
+- Avoid repetition – instead of writing the same code again, we call the function.
+
+- Increase reusability – the same function can be used in different programs.
+
+- Improve readability – code looks cleaner and organized.
+
+- Simplify debugging – if an error occurs, we can check just one function.
+
+- Support teamwork – in large projects, different programmers can write different functions.
+
+**Where do we use Functions?**
+
+We use functions:
+
+- To perform calculations (like sqrt() or pow() from math library).
+
+- To organize big programs into smaller modules.
+
+- For input/output (printf, scanf are functions).
+
+- To implement logic (like sorting, searching, swapping, etc.).
+
+- Basically, functions are used everywhere in C — even main() is a function!
+
+**Advantages of using Functions**
+
+**What it means** Functions let you break a program into small, named pieces (modules). That gives:
+
+- **Modularity** — easier to understand & test one piece at a time.
+
+- **Reusability** — call the same code from many places instead of copying it.
+
+- **Maintainability** — change implementation in one place.
+
+- **Abstraction** — callers don’t need to know internal details.
+
+- **Easier debugging & testing** — test each function independently.
+
+**Library Functions**
+
+- The library funct.ions are formally not a part of the C language, but they are supplied with every C compiler. The source code of the library functions is not given to the user. These functions are precompiled and the user gets only the object code. This object code is linked, to the object code of your program by the linker. Different categories of library functions are grouped together in separate Library files. When we call a library function in our program, the linker selects the code ofthat function from the library file and adds it to the program.
+ 
+- The definition, declaration and call of library functions
+
+ 1. Function Definition- Predefined, precompiled and present in the library.'
+ 
+ 2. Function Declaration- In header files ( files with a .h extension)
+ 
+ 3. Function Call- By the programmer
+
+-  To use a library function in our program we should know
+  (i) Name ofthe function and its purpose
+
+ (ii) Type and number of arguments it accepts
+ 
+(iii) Type of the value it returns
+
+(iv)  Name ,of the header file to be included.
+ 
+- We can define any function of our own with the same name as that of any function in the C library.
+- If we do so then the function that we have defined will take precedence over the library function with the same name. 
+- These are predefined functions in C’s standard library.
+
+**Examples:**
+
+- <stdio.h> → printf(), scanf().
+
+- <string.h> → strlen(), strcpy().
+
+- <math.h> → sqrt(), pow().
+
+- <stdlib.h> → malloc(), free().
+
+**Example**
+```
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    double x = 16.0;
+    printf("Square root of 16 = %.2f\n", sqrt(x)); // library function
+    return 0;
+}
+```
+
+**User-Defined Functions**
+
+- Functions written by the programmer for specific tasks. These types of functions are called as a User-Defined Functions.
+
+- To create and use these fucntions we should know about these three things.Those are:
+
+  1. Fucntion Definition
+
+  2. Fucntion Declaration
+
+  3. Fucntion Calling / Function Invocation
+  
+**1. Fucntion Definition:**
+
+- It gives the actual body of the function.
+
+**Syntax:**
+```
+return_type function_name(parameters) {
+    // body
+}
+```
+
+**Example**
+```
+int square(int n)
+{  
+    return n * n; // function definition
+}
+```
+
+**2. Fucntion Declaration:**
+
+- A prototype tells compiler about function name, return type, and parameters.
+
+- Allows type checking.
+
+- Must match definition.
+
+**Example**
+```
+#include <stdio.h>
+int add(int, int); // declaration
+int main()
+{
+    printf("%d\n", add(2,3));
+    return 0;
+}
+int add(int x, int y)
+{ 
+    return x + y; // definition
+}
+```
+
+**3. Fucntion Calling / Fucntion Invoation**
+
+- When we use a function inside main or another function, that is calling.
+
+**Example:**
+```
+#include <stdio.h>
+int square(int n)
+{
+   return n * n;
+}
+int main()
+{
+    int result = square(5); // function call
+    printf("Square = %d\n", result);
+    return 0;
+}
+```
+- If the function defined and not called even once then it's code will never be executed. A function can be called more than once, so the code is, executed each time it is called. The execution of a function finishes either when the closing braces of the function body are reached or if return statement is encountered.
+
+**Return Statement**
+
+- Used to exit from a function.
+
+- Can return a value to the caller.
+
+- In void functions → return; just exits.
+
+**Example**
+```
+#include <stdio.h>
+int add(int a, int b)
+{
+    return a + b;  // return value
+}
+void show()
+{
+    printf("Hello\n");
+    return; // exits function
+}
+int main()
+{
+    printf("Sum = %d\n", add(3, 4));
+    show();
+    return 0;
+}
+```
+
+**Function Parameters and Arguments**
+
+- Parameters = variables in function definition.
+
+- Arguments = actual values passed during function call.
+
+- C uses call by value (copy passed).
+
+ - The calling function sends some values to the called function for communication; these values are called
+ arguments or parameters.
+
+ - **Actual arguments:**
+ 
+ - The arguments which are mentioned in the function cali are known as actual arguments, since these are the values which are actually sent to the called function. Actual arguments can be written in the form of variables, constants or expressions or any function call that returns a value.
+
+- **Formal arguments:**
+
+- The name of the arguments, ~hich are mentioned in the function definition are called formal or dummy arguments since they are used just to hold the values that are sent by the calling function.
+
+ - These, formal arguments are simply like other local variables ofthe·function which are created when the function call srarts and are destroyed when the function ends. However there are Jwo differeqces, First is that fornml arguments are declared inside parentheses while other local variables are de~lared at the beginning ofthe function block. The second difference is'that fopnalarguments are autonlatically initialized with the values ofthe achial arguments passed, while other local variables are assigned values through the statements written inside the function body.
+ 
+ - The order, number and type of actual arguments in the function call should match with the order, number and type of formal arguments in the function definition.
+
+**Example**
+```
+ #include<stdio.h>
+ main( )
+ {
+    int m=6.n=3;
+    prinif(~~d\t":multiply(~,n)J;
+    printf ("%d\ t" ,'mnltlply"(is:,'1;1),' i";"
+    printf("%d\t".multiply(m+n.m-n));
+    printf("%d\n".multiply(6.srim(m,n))) ;
+ }
+ multiply(int x. int y)
+ {
+    int ~;
+    p:::x*y;
+    return p;
+ }
+ sum(int x , int. y)
+ {
+    return X+Y;
+ }
+```
+
+**Order of Evaluation of Function Arguments**
+
+- When you call a function with multiple arguments, the C standard does not specify the order in which those arguments are evaluated.
+
+- Some compilers may evaluate left to right, others right to left.
+
+- That means, if your code depends on the order of evaluation → you may get different results on different compilers.
+
+- Also, if the same variable is modified more than once in one statement, it may cause undefined behavior.
+
+ ## Types Of Functions
+ 
+- The functions can be classified into four categories on the basis of the arguments and return value.
+
+- 1. Functions with no arguments and no return value.
+- 2. Functions with no arguments and a return value.
+- 3. Functions with arguments and no return value.
+- 4. Functions with arguments and a return value.
+
+**1. Functions with no arguments and no return value**
+
+- These functions do not take any input (arguments) and also do not give back any output (return value).
+
+- They just perform a task.
+
+**Synatx**
+```
+void func(void)
+main()
+{
+   ...;
+   func();
+   ...;
+}
+void func(void)
+{
+   ...;
+   statements;
+   ...;
+}
+```
+
+**Example**
+```
+ #include<stdio.h>
+ void dispmenu(void) // Functions with no arguments and no return value
+ {
+    printf ("1.Create database\n");
+    printf("2.Insert new record\n");
+    printf("3.Modifya record\n");
+    printf("4.Delete a record\n");
+    printf("5.Display all records\n");
+    printf("6.Exit\n");
+}  
+ int main( ) //Function Call
+ {
+    int choice;.
+    dispmenu( ) ;
+    printf ("Enter your choice :"};
+    scanf("%d",&choice);
+ }
+```
+
+**2. Functions with no arguments and a return value**
+
+- These functions take no input, but they return a value back to the calling function.
+
+- Useful when you want to compute something and return the result.
+
+**Syntax:**
+```
+void main()
+{
+    int result;
+    ...;
+    result = func();   
+    ...;
+}
+int func(void)    
+{
+    ...;
+    statements;
+    ...;
+    return value; 
+}
+```
+**Example**
+```
+#include <stdio.h>
+int getNumber(void)  // function definition
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    return n;  // return value to main
+}
+int main()   // function call
+{
+    int x;
+    x = getNumber();  // function returns a value
+    printf("You entered: %d\n", x);
+}
+```
+
+**3. Functions with arguments and no return value**
+
+- Function accepts input values (arguments).
+- Function does not return a value.
+- Used when function only needs to use inputs to perform an action, like printing or updating.
+
+**Synatx**
+```
+#include <stdio.h>
+void func(int x, int y); // function declaration
+void main()
+{
+    ...;
+    func(10, 20);  // function call with arguments
+    ...;
+}
+void func(int a, int b)  // function definition
+{
+    ...;
+    statements using a and b;
+    ...;
+}
+```
+
+**Example**
+```
+#include <stdio.h>
+void displaySum(int a, int b)  
+{
+    int sum = a + b;
+    printf("The sum of %d and %d is %d\n", a, b, sum);
+}
+int main()   
+{
+    int x = 10, y = 20;
+    displaySum(x, y);  
+}
+```
+
+ **4. Functions with arguments and a return value**
+
+- Function accepts inputs (arguments).
+- Function returns a value using return.
+- This is the most common and flexible type of function.
+
+**Synatx**
+```
+#include <stdio.h>
+int func(int x, int y);    // function declaration
+void main()
+{
+    int result;
+    ...;
+    result = func(10, 20);   // function call with arguments
+    ...;
+}
+int func(int a, int b)     // function definition
+{
+    ...;
+    statements using a and b;
+    ...;
+    return value;    // must return result
+}
+```
+
+**Example**
+```
+#include <stdio.h>
+int add(int a, int b)   
+{
+    int sum = a + b;
+    return sum;   
+}
+int main()   
+{
+    int x, y, result;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &x, &y);
+    result = add(x, y);   
+    printf("The sum is: %d\n", result);
+}
+```
+
+**main( ) Function**
+ 
+- Execution of every C program always begins with the function main(). Each function is called directly or indirectly in main() and after all functions have done their operations, control returns back to main(). There can be only one main() function in a program.
+
+- The main() function is a user defined functionbut the name, number and type ofarguments are predefined in the language. The operating system calls. the main function and main() returns a value of integer type to the operating system. If the value returned is zero, it implies that the function has terminated successfully and any nonzero return value indicates an error. If no return value is specified in main() then any garbage value will be returned automatically. Calling the function exit( ) with an integer value is equivalent to returning that value from main(). The definition, declaration and call of main() function.
+
+  1.Function Declaration- By the C compiler
+
+  2.Function Definition- By the programmer
+
+  3.Function Call- By the operating system
 
 
 
